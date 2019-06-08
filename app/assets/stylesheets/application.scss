@@ -43,14 +43,16 @@
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-align: center;
 }
 
-// sign-up画面
+// sign-up画面・logーin画面
 a {
 	color: #FF8856;
 }
 .card {
 	margin: 100px auto;
+	text-align: center;
 }
 .card-title {
 	text-align: center;
@@ -60,16 +62,12 @@ input[type="text"],[type="email"],[type="password"] {
         width: 350px;
         height: 25px;
 }
-.submit {
-	text-align: right;
-}
-.login-link {
-	text-align: center;
-}
 // placeholderの色
 ::-webkit-input-placeholder{
   color: #ccc;
+  font-size: 12px;
 }
 .form-label {
 	font-size: 12px;
+	text-align: left;
 }
