@@ -63,4 +63,19 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # ログイン/ログアウト
 gem "devise"
-
+# 画像投稿用
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+# 画像サイズ変更
+gem "refile-mini_magick"
+# ページネーション
+gem "kaminari", "~> 1.1.1"
+# enumを日本語化
+gem "enum_help"
+# レイアウト
+gem "bootstrap", "~> 4.3.1"
+# デザイン
+gem "jquery-rails"
+# デバック用
+gem "pry-rails"
+# modeleにschema情報
+gem "annotate"
