@@ -38,34 +38,50 @@
 
 // ボタンの設定
 .btn {
-    padding: 10px 140px;
+    padding: 10px 141px;
     border: 0 none;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
 }
+.actions {
+	text-align: center;
+}
 
 // sign-up画面・logーin画面
 a {
 	color: #FF8856;
 }
+.link {
+	text-align: center;
+}
+
 .card {
 	margin: 100px auto;
-	text-align: center;
 }
 .card-title {
 	text-align: center;
 	font-weight: bold;
 }
 input[type="text"],[type="email"],[type="password"] {
-        width: 350px;
-        height: 25px;
+    width: 350px;
+    height: 25px;
 }
+
 // placeholderの色
 ::-webkit-input-placeholder{
-  color: #ccc;
-  font-size: 12px;
+  	color: #ccc;
+  	font-size: 12px;
+}
+// sign-up画面
+input[type="file"] {
+	font-size: 11px;
+}
+// log-in画面
+.login-text {
+	text-align: center;
+	font-weight: bold;
 }
 .form-label {
 	font-size: 12px;

@@ -4,9 +4,8 @@
         <div class="card-body">
           <h4 class="card-title">ethinaviを登録する</h4>
           <hr class="my-3">
-
+          <%= devise_error_messages! %>
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= render "devise/shared/error_messages", resource: resource %>
               <div class="field">
                 <span class="form-label">画像</span><br />
                 <%= f.file_field :user_image_id %>
@@ -14,27 +13,29 @@
 
               <div class="field">
                 <span class="form-label">ユーザー名</span><br />
-                <%= f.text_field :name, class: "fa", placeholder: "\uf007" %>
+                <%= f.text_field :name, placeholder: " 例 : エシナビ太郎" %>
               </div>
 
               <div class="field">
                 <span class="form-label">メールアドレス</span><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "fa", placeholder: "\uf0e0" %>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: " 例 : mail@mail.com" %>
               </div>
 
               <div class="field">
                 <span class="form-label">パスワード</span><br />
-                <%= f.password_field :password, autocomplete: "new-password", class: "fa", placeholder: "\uf023" %>
+                <%= f.password_field :password, autocomplete: "new-password", placeholder: " 例 : 6文字以上の半角英数" %>
               </div>
 
               <div class="actions"><br />
-                <%= f.submit "Sign up", class: "btn btn-primary" %>
+                <%= f.submit "登録する", class: "btn btn-primary" %>
               </div>
+
           <% end %>
           <hr class="my-3">
-          <div class="login-link">
+          <div class="link">
             <%= link_to("ログイン","/users/sign_in") %>
           </div>
+
         </div>
     </div>
   </div>
