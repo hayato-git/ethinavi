@@ -17,7 +17,8 @@
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  user_flag              :integer          default(0)
-#  user_image_id          :text
+#  profile_image_id       :string
+#  userimage_id           :text
 #
 
 require 'test_helper'

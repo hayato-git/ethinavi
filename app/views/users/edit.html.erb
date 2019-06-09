@@ -1,2 +1,35 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+		<div class="card" style="width: 30rem;">
+	  	<div class="card-body">
+	  		<h5 class="card-title">ユーザー情報編集</h5>
+        <hr class="my-3">
+
+				<%= form_with model: @user do |f| %>
+
+		 			<div class="field">
+						<span class="form-label">プロフィール画像</span><br />
+             	<%= f.attachment_field :userimage %>
+          </div>
+
+        	<div class="field">
+           	<span class="form-label">ユーザー名</span><br />
+          	<%= f.text_field :name %>
+        	</div>
+
+        	<div class="field">
+          	<span class="form-label">メールアドレス</span><br />
+           	<%= f.email_field :email %>
+        	</div>
+
+        	<div class="actions"><br />
+          	<%= f.submit "保存する", class: "btn btn-primary" %>
+        	</div>
+
+      	<% end %>
+
+	  	</div>
+    </div>
+ 	</div>
+</div>
+
