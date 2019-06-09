@@ -6,10 +6,6 @@
           <hr class="my-3">
           <%= devise_error_messages! %>
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-              <div class="field">
-                <span class="form-label">画像</span><br />
-                <%= f.file_field :user_image_id %>
-              </div>
 
               <div class="field">
                 <span class="form-label">ユーザー名</span><br />
@@ -25,6 +21,11 @@
                 <span class="form-label">パスワード</span><br />
                 <%= f.password_field :password, autocomplete: "new-password", placeholder: " 例 : 6文字以上の半角英数" %>
               </div>
+
+              <div class="field">
+                  <span class="form-label">パスワード (確認)</span><br />
+                  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:" 入力したパスワードを再入力" %>
+                </div>
 
               <div class="actions"><br />
                 <%= f.submit "登録する", class: "btn btn-primary" %>
