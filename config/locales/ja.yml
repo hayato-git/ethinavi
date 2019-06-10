@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+  enums: # <= HERE!
+    genre:
+      Food_and_Drink: 食料・飲料
+      Fashion: ファッション
+      Daily_necessities: 日用品
+      General_goods: 雑貨
+      Local_food: 地産地消
+      Select_shop: セレクトショップ
