@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="card" style="width: 30rem;">
+		<div class="card" style="width: 25rem;">
 			<div class="card-body">
 				<h5 class="card-title">Shop投稿</h5>
 				<hr class="my-3">
@@ -30,7 +30,7 @@
 						<span class="form-label">住所</span><br />
 	             		<%= form.text_field :address %>
 	          		</div>
-
+	          		<!-- TODO: 文字数制限を記入する -->
 	          		<div class="field">
 						<span class="form-label">お店概要</span><br />
 	             		<%= form.text_area :description %>
@@ -66,11 +66,10 @@
 		          		<div class="field">
 							<span class="form-label">ジャンル</span><br />
 		             		<%= genre.select :genre, Genre.genres.keys.map {|k| [I18n.t("enums.genre.#{k}"), k]} %>
-		          		</div>
-
+		          		</div><br />
 		          	<% end %>
 
-		          	<%= form.submit "お店投稿" %>
+		          	<%= form.submit "お店投稿", class: "btn btn-primary" %>
 		        <% end %>
 			</div>
 		</div>

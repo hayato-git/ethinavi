@@ -15,6 +15,10 @@
  */
  @import "bootstrap";
 
+// リンク
+a {
+    color: #FF8856;
+}
 
 // bootstrapのprimaryの色
 .btn-primary {
@@ -49,10 +53,8 @@
 	text-align: center;
 }
 
-// sign-up画面・logーin画面
-a {
-	color: #FF8856;
-}
+// sign-up log-in user-edit shop-new 画面
+
 .link {
 	text-align: center;
 }
@@ -68,6 +70,7 @@ input[type="text"],[type="email"],[type="password"] {
     width: 350px;
     height: 25px;
 }
+
 ::-webkit-input-placeholder{
   	color: #ccc;
   	font-size: 12px;
@@ -81,4 +84,11 @@ input[type="text"],[type="email"],[type="password"] {
 .form-label {
 	font-size: 12px;
 	text-align: left;
+}
+
+// shop-new 画面
+textarea {
+    min-width: 350px;
+    min-height: 70px;
+    resize: vertical; 
 }
