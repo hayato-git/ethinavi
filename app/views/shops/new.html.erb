@@ -65,7 +65,7 @@
 
 		          		<div class="field">
 							<span class="form-label">ジャンル</span><br />
-		             		<%= genre.select :genre, Genre.genres.keys.map {|k| [I18n.t("enums.genre.#{k}"), k]} %>
+		             		<%= genre.select :genre, Genre.genres.keys.map {|k| [I18n.t("enums.genre.genre.#{k}"), k]} %>
 		          		</div><br />
 		          	<% end %>
 
