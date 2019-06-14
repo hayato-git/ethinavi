@@ -15,11 +15,6 @@
  */
  @import "bootstrap";
 
-// リンク
-a {
-    color: #FF8856;
-}
-
 // bootstrapのprimaryの色
 .btn-primary {
     background: #FF8856; //ボタンの背景色
@@ -91,4 +86,77 @@ textarea {
     min-width: 350px;
     min-height: 70px;
     resize: vertical; 
+}
+
+// shop-show 画面
+// Table
+table{
+  width: 100%;
+}
+
+table th{
+  position: relative;
+  text-align: left;
+  width: 35%;
+}
+
+table th:after{
+  display: block;
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #FF8856;
+  position: absolute;
+  top:calc(50% - 1px);
+  right:20px;
+}
+
+table td{
+  text-align: left;
+  width: 85%;
+}
+// ボタン・各ボタン
+.btns {
+    display: flex;
+    justify-content: center;
+}
+.btns-btn {
+    margin: 0 20px;
+}
+.btn-twitter {
+    width: 150px;
+    background-color: #1DA1F2;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-facebook {
+    width: 150px;
+    background-color: #3B5998;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-line {
+    width: 150px;
+    background-color: #5ae628;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+// それぞれrowの間
+.row {
+    padding-top: 20px;
 }

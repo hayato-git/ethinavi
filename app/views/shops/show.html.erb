@@ -1,2 +1,77 @@
-<h1>Shops#show</h1>
-<p>Find me in app/views/shops/show.html.erb</p>
+<div class="content">
+	<div class="container-fluid">
+		<!-- お店の画像と店名・ジャンル・説明 -->
+    	<div class="row">
+    		<div class="col-md-3"></div>
+        	<div class="col-md-3">
+            	<%= attachment_image_tag @shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'400x400', class: "img-thumbnail" %>
+            </div>
+            <div class="col-md-3">
+                	<h2 class="card-title text-left"><%= @shop.shop_name %></h2>
+                	<h4><% @shop.genres.each do |genre| %>
+                		<span class="badge badge-pill badge-primary"><%= genre.genre_i18n %></span>
+                		<% end %>
+                	</h4>
+                	<p><%= @shop.description %></p>
+        	</div>
+        	<div class="col-md-3"></div>
+    	</div>
+    	<!-- お店の基本情報 -->
+    	<div class="row">
+    		<div class="col-md-3"></div>
+    		<div class="col-md-6">
+				<div class="show-table">
+					<table>
+						  <tr>
+						    <th>HP</th>
+						    <td><a href="<%= @shop.homepage %>"></a></td>
+						  </tr>
+						  <tr>
+						    <th>住所</th>
+						    <td><%= @shop.postalcode %>   <%= @shop.address %></td>
+						  </tr>
+						  <tr>
+						    <th>電話番号</th>
+						    <td><%= @shop.phonenum %></td>
+						  </tr>
+						  <tr>
+						    <th>アクセス方法</th>
+						    <td><%= @shop.access %></td>
+						  </tr>
+						  <tr>
+						  	<th>営業日時</th>
+						  	<td><%= @shop.business_hours %>  <%= @shop.regular_holiday %></td>
+						  </tr>
+						  <tr>
+						  	<th>開店年月日</th>
+						  	<td><%= @shop.opening_date %></td>
+						  </tr>
+					</table>
+				</div>
+			</div>
+			<div class="col-md-3"></div>
+		</div>
+		<!-- ボタンを配置 シェア先のURLはAWSに上げてから？-->
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<div class="btns">
+					<div class="btns-btn">
+						<a href="http://www.facebook.com/share.php?u=「シェア先URL」&t=「シェア本文」" target="_blank" rel="nofollow" class="btn-facebook mb-4 mt-2"><i class="fab fa-facebook-f"></i> 投稿する</a>
+					</div>
+					<div class="btns-btn">
+						<a href="https://twitter.com/intent/tweet?text=私&url=「シェア先URL」" target="_blank" rel="nofollow" class="btn-twitter mb-4 mt-2"><i class="fab fa-twitter"></i> 投稿する</a>
+					</div>
+					<div class="btns-btn">
+						<a href="http://line.me/R/msg/text/?「シェア先URL」" class="btn-line mb-4 mt-2"><i class="fab fa-line"></i> 投稿する</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+		<!-- TODO: 基本を作ったら修正する -->
+			<!-- if user_signed_in? -->
+			<!-- if current_user.user_flag == 1 (管理者は1番) -->
+		<%= link_to "編集", edit_shop_path %><%= link_to "削除", shop_path , method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
+</div>

@@ -53,6 +53,7 @@
   				<% end %>
   			</div>
   		</div>
+      <%= paginate @shops, class: "paginate" %>
   	</div>
 
 	<!-- ジャンルが食品・飲料にあてはまるもの -->
@@ -73,6 +74,7 @@
   				<% end %>
   			</div>
   		</div>
+      <%= paginate @genre, class: "paginate" %>
   	</div>
 
   	<!-- genreが1(ファッション)にあてはまるもの -->
@@ -93,6 +95,7 @@
   				<% end %>
   			</div>
   		</div>
+      <%= paginate @genre_one, class: "paginate" %>
   	</div>
 
   	<!-- genreが2(日用品)にあてはまるもの -->
@@ -113,6 +116,7 @@
   				<% end %>
   			</div>
   		</div>
+      <%= paginate @genre_two, class: "paginate" %>
   	</div>
 
   	<!-- genreが3(雑貨)にあてはまるもの -->
@@ -133,6 +137,7 @@
   				<% end %>
   			</div>
   		</div>
+      <%= paginate @genre_three, class: "paginate" %>
   	</div>
 
   	<!-- genreが4(地産地消)にあてはまるもの -->
@@ -153,6 +158,7 @@
   				<% end %>
   			</div>
   		</div>
+      <%= paginate @genre_four, class: "paginate" %>
   	</div>
 
   	<!-- genreが5(セレクトショップ)にあてはまるもの -->
@@ -173,7 +179,7 @@
   				<% end %>
   			</div>
   		</div>
+      <%= paginate @genre_five, class: "paginate" %>
   	</div>
-
 
 </div>
