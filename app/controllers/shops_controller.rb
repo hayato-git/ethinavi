@@ -33,19 +33,38 @@ class ShopsController < ApplicationController
   	end
 
   	def edit
+      @shop = Shop.find(params[:id])
   	end
 
   	def update
+      @shop = Shop.find(params[:id])
+      if @shop.update(update_show_params)
+        redirect_to("/shops")
+      else
+        render :edit
+      end
   	end
 
   	def destroy
+      @shop = Shop.find(params[:id])
+      @shop.destroy
+      redirect_to("/shops")
   	end
 
     private
+
     def shop_params
       params.require(:shop).permit(:shop_name, :shop_image, :phonenum, :postalcode, :address, :description, :regular_holiday, :access, :business_hours, :opening_date, :homepage,
                                     genres_attributes: [:genre]
                                   )
     end
+
+    def update_show_params
+      params.require(:shop).permit(:shop_name, :shop_image, :phonenum, :postalcode, :address, :description, :regular_holiday, :access, :business_hours, :opening_date, :homepage,
+                                    genres_attributes: [:genre, :_destroy, :id]
+                                    )
+    end
+
+
 
 end

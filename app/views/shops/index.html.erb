@@ -33,28 +33,28 @@
 
 	<!-- お店全部を取り出す -->
   	<div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-  		<div class="container">
-  			<div class="row">
-  				<% @shops.each do |shop| %>
-  					<div class="card" style="width: 20rem;">
-  						<%= link_to shop_path(shop.id) do %>
-  						<%= attachment_image_tag shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'350x350', class: "img-thumbnail" %>
-  						<% end %>
-  						<div class="card-body">
-  							<h2 class="card-text"><%= shop.shop_name %></h2>
-  							<h4 class="card-text"><%= shop.access %></h4>
-  							<h4 class="card-text">
-  								<% shop.genres.each do |g| %>
-  									<%= g.genre_i18n %>
-  								<% end %>
-  							</h4>
-  						</div>
-  					</div>
-  				<% end %>
-  			</div>
-  		</div>
+
+      <div class="container">
+        <div class="row">
+          <% @shops.each do |shop| %>
+            <div class="card" style="width: 20rem;">
+              <%= link_to shop_path(shop.id) do %>
+              <%= attachment_image_tag shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'350x350', class: "img-thumbnail" %>
+              <% end %>
+              <div class="card-body">
+                <h2 class="card-text"><%= shop.shop_name %></h2>
+                <h4 class="card-text"><%= shop.access %></h4>
+                <h4 class="card-text">
+                  <% shop.genres.each do |g| %>
+                    <%= g.genre_i18n %>
+                  <% end %>
+                </h4>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
       <%= paginate @shops, class: "paginate" %>
-  	</div>
 
 	<!-- ジャンルが食品・飲料にあてはまるもの -->
   	<div class="tab-pane fade" id="pills-food_drink" role="tabpanel" aria-labelledby="pills-food_drink-tab">
