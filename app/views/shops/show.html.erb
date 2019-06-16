@@ -69,9 +69,39 @@
 			</div>
 			<div class="col-md-4"></div>
 		</div>
+		<div class="row">
+			<div class="col-md-4 offset-md-4">
+				<h3 class="comment-title">コメント</h3>
+				<%= form_for([@shop, @comment]) do |f| %>
+				<%= f.text_field :comment ,placeholder: "コメントをここに入力" %>
+				<%= f.submit "送信する" %>
+				<% end %>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<% @shop.comments.each do |shop_comment| %>
+				<div class="speech_bubble">
+					<div class="icon">
+						<%= attachment_image_tag shop_comment.user, :userimage, :fill, 200, 200, format: 'jpeg', fallback: "user_default.jpg", :size =>'70x70', class: "img-thumbnail" %>
+					</div>
+					<%= shop_comment.comment %><br>
+					<span><%= shop_comment.user.name %>
+					<%= shop_comment.created_at.strftime('%Y-%m-%d %H:%M') %>
+						<!-- 削除する -->
+					<%= link_to "削除", shop_path(@shop, shop_comment), method: :delete %>
+					</span>
+				</div>
+				<% end %>
+			</div>
+		</div>
 		<!-- TODO: 基本を作ったら修正する -->
 			<!-- if user_signed_in? -->
 			<!-- if current_user.user_flag == 1 (管理者は1番) -->
 		<%= link_to "編集", edit_shop_path %><%= link_to "削除", shop_path , method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 </div>
+
+
+
+

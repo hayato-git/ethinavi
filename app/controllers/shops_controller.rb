@@ -30,6 +30,7 @@ class ShopsController < ApplicationController
 
   	def show
       @shop = Shop.find(params[:id])
+      @comment = Comment.new
   	end
 
   	def edit
@@ -64,7 +65,4 @@ class ShopsController < ApplicationController
                                     genres_attributes: [:genre, :_destroy, :id]
                                     )
     end
-
-
-
 end

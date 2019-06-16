@@ -160,3 +160,49 @@ table td{
 .row {
     padding-top: 20px;
 }
+// コメント機能
+.comment-title {
+  font-weight: bold;
+}
+// コメントの横棒
+.comment-title::before{
+    content: '';
+    display: inline-block;
+    background: #BD0404;
+    height: 22px;
+    width: 4px;
+    margin-right: 6px;
+}
+// 吹き出し
+.speech_bubble{
+  position: relative;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  background-color: #0888ff;
+  margin-left: 110px;          /* 左に余白を設ける */
+  margin-bottom: 10px;
+}
+// 画像
+.speech_bubble .icon{
+  position: absolute;
+  left: -110px;
+  top: 0;
+}
+// 吹き出しの三角部分
+.speech_bubble::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -15px;
+  top: 20px;
+  border-right: 15px solid #0888ff;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+// 吹き出し内のコメント者と日時
+.speech_bubble span {
+  font-size: 8px;
+}

@@ -18,5 +18,7 @@ module Ethinavi
     # i18n使用するために記載
     config.i18n.default_locale = :ja
 	config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
+    # 日本時間で表示
+    config.time_zone = 'Tokyo'
   end
 end
