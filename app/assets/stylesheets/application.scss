@@ -16,8 +16,8 @@
  @import "bootstrap";
 
 body {
-  font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
-  background-color: #FCFCFC;
+    font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    background-color: #FCFCFC;
 }
 
 // bootstrapのprimaryの色
@@ -50,21 +50,21 @@ body {
     text-align: center;
 }
 .actions {
-	text-align: center;
+    text-align: center;
 }
 
 // sign-up log-in user-edit shop-new 画面
 
 .link {
-	text-align: center;
+	  text-align: center;
 }
 
 .card {
-	margin: 100px auto;
+	  margin: 100px auto;
 }
 .card-title {
-	text-align: center;
-	font-weight: bold;
+	  text-align: center;
+	  font-weight: bold;
 }
 input[type="text"],[type="email"],[type="password"] {
     width: 350px;
@@ -78,12 +78,12 @@ input[type="text"],[type="email"],[type="password"] {
 
 // log-in画面
 .login-text {
-	text-align: center;
-	font-weight: bold;
+	  text-align: center;
+	  font-weight: bold;
 }
 .form-label {
-	font-size: 12px;
-	text-align: left;
+	  font-size: 12px;
+	  text-align: left;
 }
 
 // shop-new 画面
@@ -96,29 +96,29 @@ textarea {
 // shop-show 画面
 // Table
 table{
-  width: 100%;
+    width: 100%;
 }
 
 table th{
-  position: relative;
-  text-align: left;
-  width: 35%;
+    position: relative;
+    text-align: left;
+    width: 35%;
 }
 
 table th:after{
-  display: block;
-  content: "";
-  width: 30px;
-  height: 2px;
-  background-color: #FF8856;
-  position: absolute;
-  top:calc(50% - 1px);
-  right:20px;
+    display: block;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #FF8856;
+    position: absolute;
+    top:calc(50% - 1px);
+    right:20px;
 }
 
 table td{
-  text-align: left;
-  width: 85%;
+    text-align: left;
+    width: 85%;
 }
 // ボタン・各ボタン
 .btns {
@@ -167,7 +167,7 @@ table td{
 }
 // コメント機能
 .comment-title {
-  font-weight: bold;
+    font-weight: bold;
 }
 // コメントの横棒
 .comment-title::before{
@@ -180,47 +180,110 @@ table td{
 }
 // 吹き出し
 .speech_bubble{
-  position: relative;
-  padding: 10px;
-  border-radius: 10px;
-  color: #ffffff;
-  background-color: #0888ff;
-  margin-left: 110px;          /* 左に余白を設ける */
-  margin-bottom: 10px;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ffffff;
+    background-color: #0888ff;
+    margin-left: 110px;          /* 左に余白を設ける */
+    margin-bottom: 10px;
 }
 // 画像
 .speech_bubble .icon{
-  position: absolute;
-  left: -110px;
-  top: 0;
+    position: absolute;
+    left: -110px;
+    top: 0;
 }
 // 吹き出しの三角部分
 .speech_bubble::before{
-  content: '';
-  position: absolute;
-  display: block;
-  width: 0;
-  height: 0;
-  left: -15px;
-  top: 20px;
-  border-right: 15px solid #0888ff;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    left: -15px;
+    top: 20px;
+    border-right: 15px solid #0888ff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
 }
 // 吹き出し内のコメント者と日時
 .speech_bubble span {
-  font-size: 8px;
+    font-size: 8px;
 }
 
 // footer
 .footer {
-  height: 180px;
-  text-align: center;
-  padding: 50px 0;
-  background-color: #848282;
-  font-size: 15px;
-  color: white;
+    height: 180px;
+    text-align: center;
+    padding: 50px 0;
+    background-color: #848282;
+    font-size: 15px;
+    color: white;
 }
 .footer-items {
-  list-style: none;
+    list-style: none;
+}
+
+// about画面
+
+.about-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    background-color: #FFCC99;
+}
+.about-text {
+    text-align: center;
+    font-size: 20px;
+    padding-top:30px;
+}
+
+.about-img {
+    width: 500px;
+    height: 500px;
+    display: block;
+    padding-top: 30px;
+    margin: auto;
+}
+
+.about-btns {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.btn-login {
+    width: 150px;
+    background-color: #FF8856;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+
+.btn-signup {
+    width: 150px;
+    background-color: #FF8856;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+
+.btn-top {
+    width: 150px;
+    background-color: #2cb696;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
 }
