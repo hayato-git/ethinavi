@@ -1,0 +1,56 @@
+<div class="container">
+  	<div class="row">
+    	<div class="card border border-0" style="width: 72rem;">
+        	<div class="card-body">
+				<h1 class="top-title">世界を救うエシカル消費</h1>
+
+				<div class="img">
+					<img src="/assets/top1.jpg" alt="サイトの画面一覧" class="top-img">
+					<img src="/assets/top2.jpg" alt="サイトの画面一覧" class="top-img">
+					<img src="/assets/top3.jpg" alt="サイトの画面一覧" class="top-img">
+				</div>
+
+				<p class="top-text">
+					ヒトは生きていく上で消費から逃れることはできません。<br>
+					衣・食・住と生活に不可欠な3要素だけでも、そこで消費する洋服や食料、エネルギーは決して少なくありません。<br>これらは「いつ、どこで、誰が、どうやって作ったのか...。」それは意図的に調べない限り、知らないまま日々が過ぎていきます。
+				</p>
+				<p class="top-text">
+					貧困や人権問題、気候変動といった問題が世界中で「喫緊の課題」です。<br>
+					これらの問題は主として、先進国による大量生産、大量消費に端を発する問題なのです。<br>先進国に暮らす人々の欲望を満たすために、劣悪な環境で長時間働く従業員や、教育を受けられず強制的に働かせられてる子供達がいたり、<br>地球の再生能力よりもはるかに早く資源を使い、環境が破壊されたりしているのが現実です。
+				</p>
+				<p class="top-text">
+					<b>エシカル消費</b>とはそういったことのないような商品を購入し、消費すること。<br>
+					仮に、消費者が一気に<b>エシカル消費</b>を実行するとします。そうなったときに社会や経済に与える影響は、とても大きいものになります。<br>
+					一人ひとりの消費者が自分たちの力の大きさを認識し、<br>「お金を払うことを通じて、社会問題の解決に貢献しよう！」と考えて消費すれば、<br>
+					私たちの日常が「<b>エシカル</b>そのもの」になっていきます。
+				</p>
+
+				<% if user_signed_in? %>
+						<div class="top-btns">
+							<div class="btns">
+								<div class="btns-btn">
+									<%= link_to "Ethinaviって？", home_about_path, { :class => "btn-about" } %>
+								</div>
+							</div>
+						</div>
+				<% else %>
+						<div class="top-btns">
+							<div class="btns">
+								<div class="btns-btn">
+									<%= link_to "ログイン", new_user_session_path, { :class => "btn-login" } %>
+								</div>
+								<div class="btns-btn">
+									<%= link_to "Ethinaviって？", home_about_path, { :class => "btn-about" } %>
+								</div>
+								<div class="btns-btn">
+									<%= link_to "新規登録", new_user_registration_path, { :class => "btn-signup" } %>
+								</div>
+							</div>
+						</div>
+				<% end %>
+
+			</div>
+		</div>
+	</div>
+</div>
+

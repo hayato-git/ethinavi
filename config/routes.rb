@@ -8,4 +8,5 @@ Rails.application.routes.draw do
     end
     delete "/shops/:id" => "shops#destroy", as: "destroy_shop"
     get "home/about" => "home#about"
+    get "home/top" => "home#top"
 end

@@ -49,12 +49,12 @@ body {
     text-transform: uppercase;
     text-align: center;
 }
+
 .actions {
     text-align: center;
 }
 
 // sign-up log-in user-edit shop-new 画面
-
 .link {
 	  text-align: center;
 }
@@ -62,10 +62,12 @@ body {
 .card {
 	  margin: 100px auto;
 }
+
 .card-title {
 	  text-align: center;
 	  font-weight: bold;
 }
+
 input[type="text"],[type="email"],[type="password"] {
     width: 350px;
     height: 25px;
@@ -120,14 +122,17 @@ table td{
     text-align: left;
     width: 85%;
 }
-// ボタン・各ボタン
+
+// ボタン・各ボタン(一部about・topでも使用)
 .btns {
     display: flex;
     justify-content: center;
 }
+
 .btns-btn {
     margin: 0 20px;
 }
+
 .btn-twitter {
     width: 150px;
     background-color: #1DA1F2;
@@ -139,6 +144,7 @@ table td{
     display: inline-block;
     border-style: none;
 }
+
 .btn-facebook {
     width: 150px;
     background-color: #3B5998;
@@ -150,6 +156,7 @@ table td{
     display: inline-block;
     border-style: none;
 }
+
 .btn-line {
     width: 150px;
     background-color: #5ae628;
@@ -161,14 +168,17 @@ table td{
     display: inline-block;
     border-style: none;
 }
+
 // それぞれrowの間
 .row {
     padding-top: 20px;
 }
+
 // コメント機能
 .comment-title {
     font-weight: bold;
 }
+
 // コメントの横棒
 .comment-title::before{
     content: '';
@@ -178,6 +188,7 @@ table td{
     width: 4px;
     margin-right: 6px;
 }
+
 // 吹き出し
 .speech_bubble{
     position: relative;
@@ -188,12 +199,14 @@ table td{
     margin-left: 110px;          /* 左に余白を設ける */
     margin-bottom: 10px;
 }
+
 // 画像
 .speech_bubble .icon{
     position: absolute;
     left: -110px;
     top: 0;
 }
+
 // 吹き出しの三角部分
 .speech_bubble::before{
     content: '';
@@ -207,6 +220,7 @@ table td{
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
 }
+
 // 吹き出し内のコメント者と日時
 .speech_bubble span {
     font-size: 8px;
@@ -221,6 +235,7 @@ table td{
     font-size: 15px;
     color: white;
 }
+
 .footer-items {
     list-style: none;
 }
@@ -233,6 +248,7 @@ table td{
     font-size: 50px;
     background-color: #FFCC99;
 }
+
 .about-text {
     text-align: center;
     font-size: 20px;
@@ -277,6 +293,50 @@ table td{
 }
 
 .btn-top {
+    width: 150px;
+    background-color: #2cb696;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+
+// top画面
+
+.top-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.top-text {
+    text-align: center;
+    font-size: 17px;
+    padding-top:20px;
+}
+
+.img {
+    text-align: center;
+}
+
+.top-img {
+    width: 350px;
+    height: 350px;
+    display: inline-block;
+    padding: 20px 15px 30px 15px;
+    margin: auto;
+    text-align: center;
+}
+
+.top-btns {
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.btn-about {
     width: 150px;
     background-color: #2cb696;
     text-align: center;
