@@ -242,11 +242,28 @@ table td{
 
 // about画面
 
+[data-ruby] {
+    position: relative;
+}
+
+[data-ruby]::before {
+    content: attr(data-ruby);
+    position: absolute;
+    top: -1em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 0.5em;
+    opacity: 0.5;
+    letter-spacing: 0.5em;
+    font-weight: normal;
+}
+
 .about-title {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
-    background-color: #FFCC99;
+    padding-top: 20px;
 }
 
 .about-text {
