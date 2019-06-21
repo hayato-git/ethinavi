@@ -102,6 +102,16 @@ body {
 .signup-link:active {
     color: #C0C0C0;
 }
+// shop-new 画面
+.shopnew-card {
+    margin: 50px auto 100px;
+}
+textarea {
+    min-width: 350px;
+    min-height: 70px;
+    resize: vertical; 
+}
+
  // log-in user-edit shop-new 画面
 
 // .card {
@@ -122,6 +132,7 @@ input[type="text"],[type="email"],[type="password"] {
   	color: #ccc;
   	font-size: 12px;
 }
+
 
 // shop-index 画面
 .index-card {
@@ -145,12 +156,6 @@ input[type="text"],[type="email"],[type="password"] {
     background-color: #9a2cb6;
 }
 
-// shop-new 画面
-textarea {
-    min-width: 350px;
-    min-height: 70px;
-    resize: vertical; 
-}
 
 // shop-show 画面
 // Table
