@@ -53,15 +53,35 @@ body {
 .actions {
     text-align: center;
 }
+// sign-up
+.signup-card {
+    margin: 80px auto 100px;
+}
+.login-link {
+    display: block;
+    text-align: center;
+}
+.login-link:link {
+    color: #C0C0C0;
+}
+.login-link:visited {
+    color: #C0C0C0;
+}
+.login-link:hover {
+    color: #C0C0C0;
+}
+.login-link:active {
+    color: #C0C0C0;
+}
 
-// sign-up log-in user-edit shop-new 画面
+ // log-in user-edit shop-new 画面
 .link {
 	text-align: center;
 }
 
-.card {
-	  margin: 100px auto;
-}
+// .card {
+// 	  margin: 100px auto;
+// }
 
 .card-title {
 	  text-align: center;

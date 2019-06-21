@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="card" style="width: 25rem;">
+    <div class="card signup-card" style="width: 25rem;">
         <div class="card-body">
           <h4 class="card-title">ethinaviを登録する</h4>
           <hr class="my-3">
@@ -33,9 +33,7 @@
 
           <% end %>
           <hr class="my-3">
-          <div class="link">
-            <%= link_to("ログイン","/users/sign_in") %>
-          </div>
+            <%= link_to "ログイン", new_user_session_path, class: "login-link" %>
 
         </div>
     </div>
