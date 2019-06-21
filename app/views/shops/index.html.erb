@@ -35,7 +35,7 @@
               <div class="card-body">
                 <h3 class="card-text"><%= shop.shop_name %></h3>
                 <h6 class="card-text"><%= shop.access %></h6>
-                <h6 class="card-text">
+                <h6 class="card-text genre-text">
                   <% shop.genres.each do |f| %>
                     <%= f.genre_i18n %>
                   <% end %>
@@ -53,14 +53,14 @@
   		<div class="container">
   			<div class="row">
   				<% @genre_food.each do |f| %>
-  					<div class="card" style="width: 20rem;">
+  					<div class="card index-card" style="width: 20rem;">
   						<%= link_to shop_path(f.shop.id) do %>
   						  <%= attachment_image_tag f.shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'318x318', class: "img-rounded img-responsive" %>
   						<% end %>
   						<div class="card-body">
   							<h3 class="card-text"><%= f.shop.shop_name %></h3>
   							<h6 class="card-text"><%= f.shop.phonenum %></h6>
-  							<h6 class="card-text"><%= f.genre_i18n %></h6>
+  							<h6 class="card-text genre-text"><%= f.genre_i18n %></h6>
   						</div>
   					</div>
   				<% end %>
@@ -74,14 +74,14 @@
   		<div class="container">
   			<div class="row">
   				<% @genre_fashion.each do |f| %>
-  					<div class="card" style="width: 20rem;">
+  					<div class="card index-card" style="width: 20rem;">
   						<%= link_to shop_path(f.shop.id) do %>
   						  <%= attachment_image_tag f.shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'318x318', class: "img-rounded img-responsive" %>
   						<% end %>
   						<div class="card-body">
   							<h3 class="card-text"><%= f.shop.shop_name %></h3>
   							<h6 class="card-text"><%= f.shop.phonenum %></h6>
-  							<h6 class="card-text"><%= f.genre_i18n %></h6>
+  							<h6 class="card-text genre-text"><%= f.genre_i18n %></h6>
   						</div>
   					</div>
   				<% end %>
@@ -95,14 +95,14 @@
   		<div class="container">
   			<div class="row">
   				<% @genre_daily.each do |f| %>
-  					<div class="card" style="width: 20rem;">
+  					<div class="card index-card" style="width: 20rem;">
   						<%= link_to shop_path(f.shop.id) do %>
   						  <%= attachment_image_tag f.shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'318x318', class: "img-rounded img-responsive" %>
   						<% end %>
   						<div class="card-body">
   							<h3 class="card-text"><%= f.shop.shop_name %></h3>
   							<h6 class="card-text"><%= f.shop.phonenum %></h6>
-  							<h6 class="card-text"><%= f.genre_i18n %></h6>
+  							<h6 class="card-text genre-text"><%= f.genre_i18n %></h6>
   						</div>
   					</div>
   				<% end %>
@@ -116,14 +116,14 @@
   		<div class="container">
   			<div class="row">
   				<% @genre_general.each do |f| %>
-  					<div class="card" style="width: 20rem;">
+  					<div class="card index-card" style="width: 20rem;">
   						<%= link_to shop_path(f.shop.id) do %>
   						  <%= attachment_image_tag f.shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'318x318', class: "img-rounded img-responsive" %>
   						<% end %>
   						<div class="card-body">
   							<h3 class="card-text"><%= f.shop.shop_name %></h3>
   							<h6 class="card-text"><%= f.shop.phonenum %></h6>
-  							<h6 class="card-text"><%= f.genre_i18n %></h6>
+  							<h6 class="card-text genre-text"><%= f.genre_i18n %></h6>
   					  </div>
   					</div>
   				<% end %>
@@ -137,14 +137,14 @@
   		<div class="container">
   			<div class="row">
   				<% @genre_local.each do |f| %>
-  					<div class="card" style="width: 20rem;">
+  					<div class="card index-card" style="width: 20rem;">
   						<%= link_to shop_path(f.shop.id) do %>
   						  <%= attachment_image_tag f.shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'318x318', class: "img-rounded img-responsive" %>
   						<% end %>
   						<div class="card-body">
   							<h3 class="card-text"><%= f.shop.shop_name %></h3>
   							<h6 class="card-text"><%= f.shop.phonenum %></h6>
-  							<h6 class="card-text"><%= f.genre_i18n %></h6>
+  							<h6 class="card-text genre-text"><%= f.genre_i18n %></h6>
   						</div>
   					</div>
   				<% end %>
@@ -158,14 +158,14 @@
   		<div class="container">
   			<div class="row">
   				<% @genre_select.each do |f| %>
-  					<div class="card" style="width: 20rem;">
+  					<div class="card index-card" style="width: 20rem;">
   						<%= link_to shop_path(f.shop.id) do %>
   						  <%= attachment_image_tag f.shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'318x318', class: "img-rounded img-responsive" %>
   						<% end %>
   						<div class="card-body">
   							<h3 class="card-text"><%= f.shop.shop_name %></h3>
   							<h6 class="card-text"><%= f.shop.phonenum %></h6>
-  							<h6 class="card-text"><%= f.genre_i18n %></h6>
+  							<h6 class="card-text genre-text"><%= f.genre_i18n %></h6>
   						</div>
   					</div>
   				<% end %>
