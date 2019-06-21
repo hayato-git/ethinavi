@@ -20,6 +20,11 @@ body {
     background-color: #FCFCFC;
 }
 
+// それぞれrowの間
+.row {
+    padding-top: 20px;
+}
+
 // ボタンの設定
 .btn {
     padding: 10px 141px;
@@ -29,6 +34,7 @@ body {
     text-transform: uppercase;
     text-align: center;
 }
+
 
 // bootstrapのprimaryの色
 .btn-primary {
@@ -53,10 +59,13 @@ body {
 .actions {
     text-align: center;
 }
+
+
 // sign-up 画面
 .signup-card {
     margin: 80px auto 100px;
 }
+
 .login-link {
     display: block;
     text-align: center;
@@ -74,18 +83,22 @@ body {
     color: #C0C0C0;
 }
 
+
 // log-in 画面
 .login-card {
     margin: 80px auto 100px;
 }
+
 .login-text {
     text-align: center;
     font-weight: bold;
 }
+
 .form-label {
     font-size: 12px;
     text-align: left;
 }
+
 .signup-link {
     display: block;
     text-align: center;
@@ -102,22 +115,31 @@ body {
 .signup-link:active {
     color: #C0C0C0;
 }
+
+
 // shop-new 画面
 .shopnew-card {
     margin: 50px auto 100px;
 }
+
 textarea {
     min-width: 350px;
     min-height: 70px;
-    resize: vertical; 
+    resize: vertical;
 }
 
- // log-in user-edit shop-new 画面
 
-// .card {
-// 	  margin: 100px auto;
-// }
+// shop-edit 画面
+.shopedit-card {
+    margin: 50px auto 100px;
+}
 
+.shopedit-btn {
+    margin-top: 25px;
+}
+
+
+// sign-up log-in shop-new shop-edit user-edit 共通部分
 .card-title {
 	  text-align: center;
 	  font-weight: bold;
@@ -162,13 +184,11 @@ input[type="text"],[type="email"],[type="password"] {
 table{
     width: 100%;
 }
-
 table th{
     position: relative;
     text-align: left;
     width: 35%;
 }
-
 table th:after{
     display: block;
     content: "";
@@ -179,18 +199,17 @@ table th:after{
     top:calc(50% - 1px);
     right:20px;
 }
-
 table td{
     text-align: left;
     width: 85%;
 }
 
-// ボタン・各ボタン(一部about・topでも使用)
+
+// ボタン・各ボタン(一部about画面・top画面でも使用)
 .btns {
     display: flex;
     justify-content: center;
 }
-
 .btns-btn {
     margin: 0 20px;
 }
@@ -231,16 +250,10 @@ table td{
     border-style: none;
 }
 
-// それぞれrowの間
-.row {
-    padding-top: 20px;
-}
-
 // コメント機能
 .comment-title {
     font-weight: bold;
 }
-
 // コメントの横棒
 .comment-title::before{
     content: '';
@@ -250,7 +263,6 @@ table td{
     width: 4px;
     margin-right: 6px;
 }
-
 // 吹き出し
 .speech_bubble{
     position: relative;
@@ -261,14 +273,12 @@ table td{
     margin-left: 110px;          /* 左に余白を設ける */
     margin-bottom: 10px;
 }
-
-// 画像
+// コメント機能のuserimage
 .speech_bubble .icon{
     position: absolute;
     left: -110px;
     top: 0;
 }
-
 // 吹き出しの三角部分
 .speech_bubble::before{
     content: '';
@@ -282,11 +292,11 @@ table td{
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
 }
-
 // 吹き出し内のコメント者と日時
 .speech_bubble span {
     font-size: 8px;
 }
+
 
 // footer
 .footer {
@@ -302,8 +312,8 @@ table td{
     list-style: none;
 }
 
-// about画面
 
+// about画面
 [data-ruby] {
     position: relative;
 }
@@ -383,8 +393,8 @@ table td{
     border-style: none;
 }
 
-// top画面
 
+// top画面
 .top-title {
     text-align: center;
     font-weight: bold;
