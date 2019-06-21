@@ -53,7 +53,7 @@ body {
 .actions {
     text-align: center;
 }
-// sign-up
+// sign-up 画面
 .signup-card {
     margin: 80px auto 100px;
 }
@@ -74,10 +74,35 @@ body {
     color: #C0C0C0;
 }
 
- // log-in user-edit shop-new 画面
-.link {
-	text-align: center;
+// log-in 画面
+.login-card {
+    margin: 80px auto 100px;
 }
+.login-text {
+    text-align: center;
+    font-weight: bold;
+}
+.form-label {
+    font-size: 12px;
+    text-align: left;
+}
+.signup-link {
+    display: block;
+    text-align: center;
+}
+.signup-link:link {
+    color: #C0C0C0;
+}
+.signup-link:visited {
+    color: #C0C0C0;
+}
+.signup-link:hover {
+    color: #C0C0C0;
+}
+.signup-link:active {
+    color: #C0C0C0;
+}
+ // log-in user-edit shop-new 画面
 
 // .card {
 // 	  margin: 100px auto;
@@ -96,16 +121,6 @@ input[type="text"],[type="email"],[type="password"] {
 ::-webkit-input-placeholder{
   	color: #ccc;
   	font-size: 12px;
-}
-
-// log-in画面
-.login-text {
-	text-align: center;
-	font-weight: bold;
-}
-.form-label {
-	font-size: 12px;
-	text-align: left;
 }
 
 // shop-index 画面
