@@ -26,4 +26,14 @@ class Shop < ApplicationRecord
 
 	attachment :shop_image
 
+	validates :shop_name, presence: true
+	validates :phonenum, presence: true, length: { in: 10..11 }
+	validates :postalcode, presence: true, length: { is: 7 }
+	validates :address, presence: true
+	validates :description, presence: true
+	validates :regular_holiday, presence: true
+	validates :access, presence: true
+	validates :business_hours, presence: true
+	validates :opening_date, presence: true
+
 end
