@@ -7,12 +7,12 @@ class CommentsController < ApplicationController
       redirect_to shop_path(shop)
   	end
 
-  	def destroy
-  	end
-
   	private
     def comment_params
-      params.require(:comment).permit(:user_id, :shop_id, :comment)
+      params.require(:comment).permit(:user_id,
+                                      :shop_id,
+                                      :comment
+                                      )
     end
 
 end

@@ -241,10 +241,20 @@ table td{
     display: inline-block;
     border-style: none;
 }
-
-.btn-line {
+.btn-edit {
     width: 150px;
-    background-color: #5ae628;
+    background-color: #007700;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-destroy {
+    width: 150px;
+    background-color: #AA0000;
     text-align: center;
     font-size: 15px;
     border-radius: 40px;
@@ -255,53 +265,55 @@ table td{
 }
 
 // コメント機能
-.comment-title {
+.comment {
+    position: relative;
+    padding-bottom: 15px;
+    padding-left: 40px;
+}
+.comment-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+}
+.image-comment {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.comment-name {
+    width: 100%;
+    display: inline-block;
+    font-size: 17px;
     font-weight: bold;
 }
-// コメントの横棒
-.comment-title::before{
-    content: '';
-    display: inline-block;
-    background: #BD0404;
-    height: 22px;
-    width: 4px;
-    margin-right: 6px;
+.comment-info {
+    font-size: 10px;
+    font-weight: normal;
 }
-// 吹き出し
-.speech_bubble{
-    position: relative;
-    padding: 10px;
-    border-radius: 10px;
-    color: #ffffff;
-    background-color: #0888ff;
-    margin-left: 110px;          /* 左に余白を設ける */
-    margin-bottom: 10px;
+.comment-form {
+    text-align: center;
+    padding: 30px 30px;
 }
-// コメント機能のuserimage
-.speech_bubble .icon{
-    position: absolute;
-    left: -110px;
-    top: 0;
+.comment-if {
+    text-align: center;
+    font-size: 15px;
+    padding: 30px 30px;
 }
-// 吹き出しの三角部分
-.speech_bubble::before{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
-    left: -15px;
-    top: 20px;
-    border-right: 15px solid #0888ff;
-    border-top: 15px solid transparent;
-    border-bottom: 15px solid transparent;
-}
-// 吹き出し内のコメント者と日時
-.speech_bubble span {
-    font-size: 8px;
-}
+.comment-if-link:link {
 
-
+}
+.comment-if-link:visited {
+    color: #C0C0C0;
+}
+.comment-if-link:hover {
+    color: #C0C0C0;
+}
+.comment-if-link:active {
+    color: #C0C0C0;
+}
 // user-edit 画面
 .useredit-card {
     margin: 100px auto 120px;

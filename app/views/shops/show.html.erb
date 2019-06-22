@@ -3,18 +3,22 @@
 		<!-- お店の画像と店名・ジャンル・説明 -->
     	<div class="row">
     		<div class="col-md-3"></div>
-        	<div class="col-md-3">
-            	<%= attachment_image_tag @shop, :shop_image, :fill, 200, 200, format: 'jpeg', fallback: "shop_no_image.jpg", :size =>'400x400', class: "img-thumbnail" %>
+        	<div class="col-md-6">
+            	<%= attachment_image_tag @shop, :shop_image, :fill, 700, 400, format: 'jpeg', fallback: "shop_no_image.jpg", class: "img-thumbnail" %>
             </div>
-            <div class="col-md-3">
-                	<h2 class="card-title text-left"><%= @shop.shop_name %></h2>
+            <div class="col-md-3"></div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-3"></div>
+    		<div class="col-md-6">
+    			<h2 class="card-title text-left"><%= @shop.shop_name %></h2>
                 	<h4><% @shop.genres.each do |genre| %>
-                		<span class="badge badge-pill badge-primary"><%= genre.genre_i18n %></span>
+                		<span class="badge badge-pill badge-dark"><%= genre.genre_i18n %></span>
                 		<% end %>
                 	</h4>
-                	<p><%= @shop.description %></p>
-        	</div>
-        	<div class="col-md-3"></div>
+                	<p><%= simple_format(@shop.description) %></p>
+    		</div>
+    		<div class="col-md-3"></div>
     	</div>
     	<!-- お店の基本情報 -->
     	<div class="row">
@@ -28,7 +32,7 @@
 						  </tr>
 						  <tr>
 						    <th>住所</th>
-						    <td><%= @shop.postalcode %>   <%= @shop.address %></td>
+						    <td>〒<%= @shop.postalcode %> <%= @shop.address %></td>
 						  </tr>
 						  <tr>
 						    <th>電話番号</th>
@@ -39,8 +43,12 @@
 						    <td><%= @shop.access %></td>
 						  </tr>
 						  <tr>
-						  	<th>営業日時</th>
-						  	<td><%= @shop.business_hours %>  <%= @shop.regular_holiday %></td>
+						  	<th>営業時間</th>
+						  	<td><%= @shop.business_hours %></td>
+						  </tr>
+						  <tr>
+						  	<th>定休日</th>
+						  	<td><%= @shop.regular_holiday %></td>
 						  </tr>
 						  <tr>
 						  	<th>開店年月日</th>
@@ -51,54 +59,72 @@
 			</div>
 			<div class="col-md-3"></div>
 		</div>
-		<!-- ボタンを配置 シェア先のURLはAWSに上げてから？-->
+		<!-- ボタンを配置 -->
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">
 				<div class="btns">
 					<div class="btns-btn">
-						<a href="http://www.facebook.com/share.php?u=「シェア先URL」&t=「シェア本文」" target="_blank" rel="nofollow" class="btn-facebook mb-4 mt-2"><i class="fab fa-facebook-f"></i> 投稿する</a>
+						<a href="http://www.facebook.com/share.php?u=https://ethinavi.herokuapp.com/shops/<%= @shop.id %>&t=<%= @shop.shop_name %>" target="_blank" rel="nofollow" class="btn-facebook mb-4 mt-2"><i class="fab fa-facebook-f"></i> 投稿する</a>
 					</div>
 					<div class="btns-btn">
-						<a href="https://twitter.com/intent/tweet?text=私&url=「シェア先URL」" target="_blank" rel="nofollow" class="btn-twitter mb-4 mt-2"><i class="fab fa-twitter"></i> 投稿する</a>
+						<a href="https://twitter.com/intent/tweet?text=<%= @shop.shop_name %>%20%23ethinavi%20%0a&url=https://ethinavi.herokuapp.com/shops/<%= @shop.id %>" target="_blank" rel="nofollow" class="btn-twitter mb-4 mt-2"><i class="fab fa-twitter"></i> 投稿する</a>
 					</div>
-					<div class="btns-btn">
-						<a href="http://line.me/R/msg/text/?「シェア先URL」" class="btn-line mb-4 mt-2"><i class="fab fa-line"></i> 投稿する</a>
-					</div>
+					<!-- 管理者のみ表示 -->
+					<% if current_user.user_flag == 1 %>
+						<div class="btns-btn">
+							<%= link_to edit_shop_path, class: "btn-edit mb-4 mt-2" do %>
+								<i class="far fa-edit"> 編集する</i>
+							<% end %>
+						</div>
+						<div class="btns-btn">
+							<%= link_to shop_path , method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-destroy mb-4 mt-2" do %>
+								<i class="far fa-trash-alt"> 削除する</i>
+							<% end %>
+						</div>
+					<% end %>
+
 				</div>
 			</div>
 			<div class="col-md-4"></div>
 		</div>
+		<hr color="#C0C0C0" width="100%" size="1">
 		<div class="row">
-			<div class="col-md-4 offset-md-4">
-				<h3 class="comment-title">コメント</h3>
-				<%= form_for([@shop, @comment]) do |f| %>
-				<%= f.text_field :comment ,placeholder: "コメントをここに入力" %>
-				<%= f.submit "送信する" %>
-				<% end %>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-6 offset-md-3">
-				<% @shop.comments.each do |shop_comment| %>
-				<div class="speech_bubble">
-					<div class="icon">
-						<%= attachment_image_tag shop_comment.user, :userimage, :fill, 200, 200, format: 'jpeg', fallback: "user_default.jpg", :size =>'70x70', class: "img-thumbnail" %>
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h6>コメント<%= @shop.comments.count %>件</h6><br>
+					<% @shop.comments.each do |comment| %>
+					<div class="comment">
+						<div class="comment-icon">
+							<%= attachment_image_tag comment.user, :userimage, size: "40x40", format: 'jpeg', fallback: "user_default.jpg", class: "image-comment" %>
+						</div>
+						<div class="comment-name">
+							<%= comment.user.name %>
+						</div>
+						<div class="comment-info">
+							<%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+						</div>
+						<div class="comment-message">
+							<%= simple_format(comment.comment) %>
+						</div>
 					</div>
-					<%= shop_comment.comment %><br>
-					<span><%= shop_comment.user.name %>
-					<%= shop_comment.created_at.strftime('%Y-%m-%d %H:%M') %>
-						<!-- 削除する -->
-					<%= link_to "削除", shop_path(@shop, shop_comment), method: :delete %>
-					</span>
-				</div>
-				<% end %>
+					<% end %>
+					<hr color="#C0C0C0" width="100%" size="1">
+					<!-- if user_signed_in?  -->
+						<div class="comment-form">
+							<%= form_for([@shop, @comment]) do |f| %>
+								<%= f.text_field :comment, placeholder: " コメントを入力" %>
+								<%= f.submit "送信する" %>
+							<% end %>
+						</div>
+					<!-- else  -->
+						<div class="comment-if">
+							コメントを投稿するには、<%= link_to "ログイン", new_user_session_path, class: "comment-if-link" %> または <%= link_to "新規登録",  new_user_registration_path, class: "comment-if-link" %> する必要があります
+						</div>
+					<!-- end  -->
 			</div>
+			<div class="col-md-3"></div>
 		</div>
-		<!-- TODO: 基本を作ったら修正する -->
-			<!-- if user_signed_in? -->
-			<!-- if current_user.user_flag == 1 (管理者は1番) -->
-		<%= link_to "編集", edit_shop_path %><%= link_to "削除", shop_path , method: :delete, data: { confirm: 'Are you sure?' } %>
 	</div>
 </div>
 
