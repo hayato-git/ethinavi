@@ -184,31 +184,54 @@ input[type="text"],[type="email"],[type="password"] {
 
 
 // shop-show 画面
+.show-genre {
+    font-size: 16px;
+}
 // Table
-table{
+// table{
+//     width: 100%;
+// }
+// table th{
+//     position: relative;
+//     text-align: left;
+//     width: 35%;
+// }
+// table th:after{
+//     display: block;
+//     content: "";
+//     width: 30px;
+//     height: 2px;
+//     background-color: #FF8856;
+//     position: absolute;
+//     top:calc(50% - 1px);
+//     right:20px;
+// }
+// table td{
+//     text-align: left;
+//     width: 85%;
+// }
+
+table {
     width: 100%;
 }
-table th{
-    position: relative;
-    text-align: left;
-    width: 35%;
-}
-table th:after{
-    display: block;
-    content: "";
-    width: 30px;
-    height: 2px;
-    background-color: #FF8856;
-    position: absolute;
-    top:calc(50% - 1px);
-    right:20px;
-}
-table td{
-    text-align: left;
-    width: 85%;
-}
+th {
+    width: 20%;
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #EEEEEE;
 
-
+}
+td {
+    width: 80%;
+    text-align: left;
+    padding: 20px 10px;
+    background-color: #FFFFFF;
+}
+th,td{
+  border:solid 1px #DDDDDD;
+  border-left: none;
+  border-right: none;
+}
 // ボタン・各ボタン(一部about画面・top画面でも使用)
 .btns {
     display: flex;
@@ -264,29 +287,30 @@ table td{
     border-style: none;
 }
 
+
 // コメント機能
 .comment {
     position: relative;
     padding-bottom: 15px;
-    padding-left: 40px;
+    padding-left: 45px;
 }
 .comment-icon {
     position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 32px;
-    height: 32px;
-    border-radius: 32px;
+    top: 1px;
+    left: 1px;
+    width: 40px;
+    height: 40px;
 }
 .image-comment {
     width: 100%;
     max-width: 100%;
     height: auto;
+    border-radius: 50%;
 }
 .comment-name {
     width: 100%;
     display: inline-block;
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
 }
 .comment-info {
@@ -299,11 +323,11 @@ table td{
 }
 .comment-if {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     padding: 30px 30px;
 }
 .comment-if-link:link {
-
+    color: #C0C0C0;
 }
 .comment-if-link:visited {
     color: #C0C0C0;
@@ -314,6 +338,8 @@ table td{
 .comment-if-link:active {
     color: #C0C0C0;
 }
+
+
 // user-edit 画面
 .useredit-card {
     margin: 100px auto 120px;
@@ -458,3 +484,97 @@ table td{
     display: inline-block;
     border-style: none;
 }
+
+
+// header
+.logo {
+    padding-left: 250px;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+}
+
+.header-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header-blanck {
+    padding-right: 250px;
+}
+
+.btn-shopnew {
+    width: 100px;
+    background-color: #FF8856;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+    margin-top: 15px;
+}
+.btn-shopnew:link {
+    color: #FFFFFF;
+}
+.btn-shopnew:visited {
+    color: #FFFFFF;
+}
+.btn-shopnew:hover {
+    color: #FFFFFF;
+}
+.btn-shopnew:active {
+    color: #FFFFFF;
+}
+
+.btn-header-signup {
+    width: 100px;
+    background-color: #FF8856;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    margin-right: 10px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-header-signup:link {
+    color: #FFFFFF;
+}
+.btn-header-signup:visited {
+    color: #FFFFFF;
+}
+.btn-header-signup:hover {
+    color: #FFFFFF;
+}
+.btn-header-signup:active {
+    color: #FFFFFF;
+}
+
+.btn-header-login {
+    width: 100px;
+    background-color: #FFFFFF;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: #FF8856;
+    display: inline-block;
+    border: solid 1px #FF8856;
+}
+.btn-header-login:link {
+    color: #FF8856;
+}
+.btn-header-login:visited {
+    color: #FF8856;
+}
+.btn-header-login:hover {
+    color: #FF8856;
+}
+.btn-header-login:active {
+    color: #FF8856;
+}
+

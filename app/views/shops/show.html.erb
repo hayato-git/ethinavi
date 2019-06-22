@@ -13,7 +13,7 @@
     		<div class="col-md-6">
     			<h2 class="card-title text-left"><%= @shop.shop_name %></h2>
                 	<h4><% @shop.genres.each do |genre| %>
-                		<span class="badge badge-pill badge-dark"><%= genre.genre_i18n %></span>
+                		<span class=" show-genre badge badge-pill badge-dark"><%= genre.genre_i18n %></span>
                 		<% end %>
                 	</h4>
                 	<p><%= simple_format(@shop.description) %></p>
@@ -24,38 +24,61 @@
     	<div class="row">
     		<div class="col-md-3"></div>
     		<div class="col-md-6">
-				<div class="show-table">
+				<!-- <div class="show-table">
 					<table>
 						  <tr>
 						    <th>HP</th>
-						    <td><a href="<%= @shop.homepage %>"></a></td>
+						    <td><a href="<= @shop.homepage %>"></a></td>
 						  </tr>
 						  <tr>
 						    <th>住所</th>
-						    <td>〒<%= @shop.postalcode %> <%= @shop.address %></td>
+						    <td>〒<= @shop.postalcode %> <= @shop.address %></td>
 						  </tr>
 						  <tr>
 						    <th>電話番号</th>
-						    <td><%= @shop.phonenum %></td>
+						    <td><= @shop.phonenum %></td>
 						  </tr>
 						  <tr>
 						    <th>アクセス方法</th>
-						    <td><%= @shop.access %></td>
+						    <td><= @shop.access %></td>
 						  </tr>
 						  <tr>
 						  	<th>営業時間</th>
-						  	<td><%= @shop.business_hours %></td>
+						  	<td><= @shop.business_hours %></td>
 						  </tr>
 						  <tr>
 						  	<th>定休日</th>
-						  	<td><%= @shop.regular_holiday %></td>
+						  	<td><= @shop.regular_holiday %></td>
 						  </tr>
 						  <tr>
 						  	<th>開店年月日</th>
-						  	<td><%= @shop.opening_date %></td>
+						  	<td><= @shop.opening_date %></td>
 						  </tr>
 					</table>
-				</div>
+				</div> -->
+				<table>
+						<tr>
+							<th>HP</th><td><a href="<%= @shop.homepage %>"><%= @shop.homepage %></a></td>
+						</tr>
+						<tr>
+							<th>住所</th><td>〒<%= @shop.postalcode %><%= @shop.address %></td>
+						</tr>
+						<tr>
+							<th>電話番号</th><td><%= @shop.phonenum %></td>
+						</tr>
+						<tr>
+							<th>アクセス方法</th><td><%= @shop.access %></td>
+						</tr>
+						<tr>
+							<th>営業時間</th><td><%= @shop.business_hours %></td>
+						</tr>
+						<tr>
+							<th>定休日</th><td><%= @shop.regular_holiday %></td>
+						</tr>
+						<tr>
+							<th>創業日</th><td><%= @shop.opening_date %></td>
+						</tr>
+				</table>
 			</div>
 			<div class="col-md-3"></div>
 		</div>
@@ -88,7 +111,7 @@
 			</div>
 			<div class="col-md-4"></div>
 		</div>
-		<hr color="#C0C0C0" width="100%" size="1">
+		<hr color="#FCFCFC" width="100%" size="1">
 		<div class="row">
 			<div class="col-md-3"></div>
 			<div class="col-md-6">
@@ -96,7 +119,7 @@
 					<% @shop.comments.each do |comment| %>
 					<div class="comment">
 						<div class="comment-icon">
-							<%= attachment_image_tag comment.user, :userimage, size: "40x40", format: 'jpeg', fallback: "user_default.jpg", class: "image-comment" %>
+							<%= attachment_image_tag comment.user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "image-comment" %>
 						</div>
 						<div class="comment-name">
 							<%= comment.user.name %>
@@ -109,7 +132,7 @@
 						</div>
 					</div>
 					<% end %>
-					<hr color="#C0C0C0" width="100%" size="1">
+					<hr color="#FCFCFC" width="100%" size="1">
 					<!-- if user_signed_in?  -->
 						<div class="comment-form">
 							<%= form_for([@shop, @comment]) do |f| %>
