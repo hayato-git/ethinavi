@@ -614,7 +614,7 @@ th,td{
     margin-bottom: 40px;
 }
 .footer-links {
-    margin-top: 5px;
+    margin-top: 13px;
     font-size: 13px;
     color: #FFFFFF;
 }
@@ -633,8 +633,12 @@ th,td{
 .footer-item:active {
     color: #FFFFFF;
 }
-
-
+.footer-icon-text {
+    font-size: 13px;
+}
+.footer-text {
+    font-size: 11px;
+}
 
 // terms privacy 共通部分
 .align-left{
