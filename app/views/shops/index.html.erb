@@ -41,6 +41,7 @@
                     <% shop.genres.each do |f| %>
                       <%= f.genre_i18n %>
                     <% end %>
+                    <i class="far fa-comment index-comment-count"><%= shop.comments.count %></i>
                   </h6>
                 </div>
               </div>

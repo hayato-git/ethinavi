@@ -15,6 +15,12 @@
  */
  @import "bootstrap";
 
+// 全体
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 300px;
+}
 
 body {
     font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
@@ -25,7 +31,6 @@ body {
 outline: none;
 }
 
-// それぞれrowの間
 .row {
     padding-top: 25px;
 }
@@ -39,7 +44,6 @@ outline: none;
     text-transform: uppercase;
     text-align: center;
 }
-
 
 // bootstrapのprimaryの色
 .btn-primary {
@@ -66,326 +70,100 @@ outline: none;
 }
 
 
-// sign-up 画面
-.signup-card {
-    margin: 80px auto 100px;
-}
-
-.login-link {
-    display: block;
-    text-align: center;
-}
-.login-link:link {
-    color: #C0C0C0;
-}
-.login-link:visited {
-    color: #C0C0C0;
-}
-.login-link:hover {
-    color: #C0C0C0;
-}
-.login-link:active {
-    color: #C0C0C0;
-}
 
 
-// log-in 画面
-.login-card {
-    margin: 80px auto 100px;
-}
-
-.login-text {
-    text-align: center;
+// header
+.logo {
+    padding-left: 250px;
     font-weight: bold;
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
 }
 
-.form-label {
+.header-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header-blanck {
+    padding-right: 250px;
+}
+
+.btn-shopnew {
+    width: 100px;
+    background-color: #FF8856;
+    text-align: center;
     font-size: 12px;
-    text-align: left;
+    border-radius: 20px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+    margin-top: 15px;
+}
+.btn-shopnew:link {
+    color: #FFFFFF;
+}
+.btn-shopnew:visited {
+    color: #FFFFFF;
+}
+.btn-shopnew:hover {
+    color: #FFFFFF;
+}
+.btn-shopnew:active {
+    color: #FFFFFF;
 }
 
-.signup-link {
-    display: block;
+.btn-header-signup {
+    width: 100px;
+    background-color: #FF8856;
     text-align: center;
-}
-.signup-link:link {
-    color: #C0C0C0;
-}
-.signup-link:visited {
-    color: #C0C0C0;
-}
-.signup-link:hover {
-    color: #C0C0C0;
-}
-.signup-link:active {
-    color: #C0C0C0;
-}
-
-
-// shop-new 画面
-.shopnew-card {
-    margin: 50px auto 100px;
-}
-
-textarea {
-    min-width: 350px;
-    min-height: 70px;
-    resize: vertical;
-}
-
-
-// shop-edit 画面
-.shopedit-card {
-    margin: 50px auto 100px;
-}
-
-.shopedit-btn {
-    margin-top: 25px;
-}
-
-
-// sign-up log-in shop-new shop-edit user-edit 共通部分
-.card-title {
-	  text-align: center;
-	  font-weight: bold;
-}
-
-input[type="text"],[type="email"],[type="password"] {
-    width: 350px;
-    height: 25px;
-}
-
-::-webkit-input-placeholder{
-  	color: #ccc;
-  	font-size: 12px;
-}
-
-
-// shop-index 画面
-.genre-all {
-    margin-left: 250px;
-    margin-top: 5px;
-}
-
-.nav-pills .nav-link.active {
-    background-color: #FCFCFC;
-    text-align: center;
-    font-size: 16px;
-    color: #000000;
-}
-.genre-link:link {
-    color: #808080;
-}
-.genre-link:visited {
-    color: #808080;
-}
-.genre-link:hover {
-    color: #808080;
-}
-.genre-link:active {
-    color: #808080;
-}
-.index-col {
-    padding-right: 20px;
-}
-.index-card {
-    margin: 50px auto;
-    border: none;
-}
-.index-card-body {
-    padding: 7px 0 0 0 ;
-    background-color: #FCFCFC;
-}
-.index-card-text {
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-.genre-text {
     font-size: 12px;
+    border-radius: 20px;
+    padding: 7px 0px;
+    margin-right: 10px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-header-signup:link {
+    color: #FFFFFF;
+}
+.btn-header-signup:visited {
+    color: #FFFFFF;
+}
+.btn-header-signup:hover {
+    color: #FFFFFF;
+}
+.btn-header-signup:active {
+    color: #FFFFFF;
 }
 
-
-// shop-show 画面
-// Table
-table {
-    width: 100%;
-}
-th {
-    width: 20%;
-    text-align: center;
-    padding: 15px 8px;
-    background-color: #EEEEEE;
-
-}
-td {
-    width: 80%;
-    text-align: left;
-    padding: 15px 8px;
+.btn-header-login {
+    width: 100px;
     background-color: #FFFFFF;
-}
-th,td{
-  border:solid 1px #DDDDDD;
-  border-left: none;
-  border-right: none;
-}
-
-// ボタン・各ボタン(一部about画面・top画面でも使用)
-.btns {
-    display: flex;
-    justify-content: center;
-}
-.btns-btn {
-    margin: 0 20px;
-}
-
-.btn-twitter {
-    width: 150px;
-    background-color: #1DA1F2;
     text-align: center;
-    font-size: 15px;
-    border-radius: 40px;
+    font-size: 12px;
+    border-radius: 20px;
     padding: 7px 0px;
-    color: #FFFFFF;
+    color: #FF8856;
     display: inline-block;
-    border-style: none;
+    border: solid 1px #FF8856;
+}
+.btn-header-login:link {
+    color: #FF8856;
+}
+.btn-header-login:visited {
+    color: #FF8856;
+}
+.btn-header-login:hover {
+    color: #FF8856;
+}
+.btn-header-login:active {
+    color: #FF8856;
 }
 
-.btn-facebook {
-    width: 150px;
-    background-color: #3B5998;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 40px;
-    padding: 7px 0px;
-    color: #FFFFFF;
-    display: inline-block;
-    border-style: none;
-}
-.btn-edit {
-    width: 150px;
-    background-color: #007700;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 40px;
-    padding: 7px 0px;
-    color: #FFFFFF;
-    display: inline-block;
-    border-style: none;
-}
-.btn-destroy {
-    width: 150px;
-    background-color: #AA0000;
-    text-align: center;
-    font-size: 15px;
-    border-radius: 40px;
-    padding: 7px 0px;
-    color: #FFFFFF;
-    display: inline-block;
-    border-style: none;
-}
-
-
-// コメント機能
-.comment {
-    position: relative;
-    padding-bottom: 15px;
-    padding-left: 45px;
-}
-.comment-icon {
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 40px;
-    height: 40px;
-}
-.image-comment {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-.comment-name {
-    width: 100%;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-}
-.comment-info {
-    font-size: 10px;
-    font-weight: normal;
-}
-.comment-form {
-    position: relative;
-    text-align: center;
-    padding: 30px 30px;
-}
-.comment-form-image {
-    position: absolute;
-    top: 20px;
-    left: 5px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-.comment-text-area {
-    border: none;
-    background-color: #FCFCFC;
-}
-.comment-submit {
-    border: none;
-    background-color: #F5F5F5;
-    margin-left: 30px;
-    font-size: 15px;
-    padding: 10px 30px 10px;
-    border-radius: 5%;
-}
-.comment-if {
-    text-align: center;
-    font-size: 16px;
-    padding: 30px 30px;
-}
-.comment-if-link:link {
-    color: #C0C0C0;
-}
-.comment-if-link:visited {
-    color: #C0C0C0;
-}
-.comment-if-link:hover {
-    color: #C0C0C0;
-}
-.comment-if-link:active {
-    color: #C0C0C0;
-}
-
-
-// user-edit 画面
-.useredit-card {
-    margin: 100px auto 120px;
-}
-// 全体
-.wrapper{
-    min-height: 100vh;
-    position: relative;
-    padding-bottom: 300px;
-}
-
-
-// footer
-.footer {
-    position: absolute;
-    bottom: 0; /*下に固定*/
-    width: 100%;
-    height: 125px;
-    text-align: center;
-    padding: 20px 0;
-    background-color: #848282;
-    font-size: 15px;
-    color: white;
-}
-
-.footer-items {
-    list-style: none;
-}
 
 
 // about画面
@@ -513,95 +291,340 @@ th,td{
 }
 
 
-// header
-.logo {
-    padding-left: 250px;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: 'Permanent Marker', cursive;
+
+
+// sign-up log-in shop-new shop-edit user-edit 共通部分
+.card-title {
+      text-align: center;
+      font-weight: bold;
 }
 
-.header-image {
-    width: 50px;
-    height: 50px;
+input[type="text"],[type="email"],[type="password"] {
+    width: 350px;
+    height: 25px;
+}
+
+::-webkit-input-placeholder{
+    color: #ccc;
+    font-size: 12px;
+}
+
+
+
+
+// sign-up 画面
+.signup-card {
+    margin: 80px auto 100px;
+}
+
+.login-link {
+    display: block;
+    text-align: center;
+}
+.login-link:link {
+    color: #C0C0C0;
+}
+.login-link:visited {
+    color: #C0C0C0;
+}
+.login-link:hover {
+    color: #C0C0C0;
+}
+.login-link:active {
+    color: #C0C0C0;
+}
+
+
+
+
+// log-in 画面
+.login-card {
+    margin: 80px auto 100px;
+}
+
+.login-text {
+    text-align: center;
+    font-weight: bold;
+}
+
+.form-label {
+    font-size: 12px;
+    text-align: left;
+}
+
+.signup-link {
+    display: block;
+    text-align: center;
+}
+.signup-link:link {
+    color: #C0C0C0;
+}
+.signup-link:visited {
+    color: #C0C0C0;
+}
+.signup-link:hover {
+    color: #C0C0C0;
+}
+.signup-link:active {
+    color: #C0C0C0;
+}
+
+
+
+
+// shop-new 画面
+.shopnew-card {
+    margin: 50px auto 100px;
+}
+
+textarea {
+    min-width: 350px;
+    min-height: 70px;
+    resize: vertical;
+}
+
+
+
+
+// shop-edit 画面
+.shopedit-card {
+    margin: 50px auto 100px;
+}
+
+.shopedit-btn {
+    margin-top: 25px;
+}
+
+
+
+
+// shop-index 画面
+.genre-all {
+    margin-left: 250px;
+    margin-top: 5px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #FCFCFC;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
+}
+.genre-link:link {
+    color: #808080;
+}
+.genre-link:visited {
+    color: #808080;
+}
+.genre-link:hover {
+    color: #808080;
+}
+.genre-link:active {
+    color: #808080;
+}
+.index-col {
+    padding-right: 20px;
+}
+.index-card {
+    margin: 50px auto;
+    border: none;
+}
+.index-card-body {
+    padding: 7px 0 0 0 ;
+    background-color: #FCFCFC;
+}
+.index-card-text {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.genre-text {
+    font-size: 15px;
+    position: relative;
+}
+.index-comment-count {
+    text-align: right;
+    font-size: 15px;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+.index-comment-count::before {
+    margin-right: 5px;
+}
+
+
+
+
+// shop-show 画面
+// Table
+table {
+    width: 100%;
+}
+th {
+    width: 20%;
+    text-align: center;
+    padding: 15px 8px;
+    background-color: #EEEEEE;
+
+}
+td {
+    width: 80%;
+    text-align: left;
+    padding: 15px 8px;
+    background-color: #FFFFFF;
+}
+th,td{
+  border:solid 1px #DDDDDD;
+  border-left: none;
+  border-right: none;
+}
+// ボタン・各ボタン(一部about画面・top画面でも使用)
+.btns {
+    display: flex;
+    justify-content: center;
+}
+.btns-btn {
+    margin: 0 20px;
+}
+.btn-twitter {
+    width: 150px;
+    background-color: #1DA1F2;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-facebook {
+    width: 150px;
+    background-color: #3B5998;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-edit {
+    width: 150px;
+    background-color: #007700;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+.btn-destroy {
+    width: 150px;
+    background-color: #AA0000;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 40px;
+    padding: 7px 0px;
+    color: #FFFFFF;
+    display: inline-block;
+    border-style: none;
+}
+// コメント機能
+.comment {
+    position: relative;
+    padding-bottom: 15px;
+    padding-left: 45px;
+}
+.comment-icon {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 40px;
+    height: 40px;
+}
+.image-comment {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
 }
-
-.header-blanck {
-    padding-right: 250px;
-}
-
-.btn-shopnew {
-    width: 100px;
-    background-color: #FF8856;
-    text-align: center;
-    font-size: 12px;
-    border-radius: 20px;
-    padding: 7px 0px;
-    color: #FFFFFF;
+.comment-name {
+    width: 100%;
     display: inline-block;
-    border-style: none;
-    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
 }
-.btn-shopnew:link {
-    color: #FFFFFF;
+.comment-info {
+    font-size: 10px;
+    font-weight: normal;
 }
-.btn-shopnew:visited {
-    color: #FFFFFF;
-}
-.btn-shopnew:hover {
-    color: #FFFFFF;
-}
-.btn-shopnew:active {
-    color: #FFFFFF;
-}
-
-.btn-header-signup {
-    width: 100px;
-    background-color: #FF8856;
+.comment-form {
+    position: relative;
     text-align: center;
-    font-size: 12px;
-    border-radius: 20px;
-    padding: 7px 0px;
-    margin-right: 10px;
-    color: #FFFFFF;
-    display: inline-block;
-    border-style: none;
+    padding: 30px 30px;
 }
-.btn-header-signup:link {
-    color: #FFFFFF;
+.comment-form-image {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
-.btn-header-signup:visited {
-    color: #FFFFFF;
+.comment-text-area {
+    border: none;
+    background-color: #FCFCFC;
 }
-.btn-header-signup:hover {
-    color: #FFFFFF;
+.comment-submit {
+    border: none;
+    background-color: #F5F5F5;
+    margin-left: 30px;
+    font-size: 15px;
+    padding: 10px 30px 10px;
+    border-radius: 5%;
 }
-.btn-header-signup:active {
-    color: #FFFFFF;
-}
-
-.btn-header-login {
-    width: 100px;
-    background-color: #FFFFFF;
+.comment-if {
     text-align: center;
-    font-size: 12px;
-    border-radius: 20px;
-    padding: 7px 0px;
-    color: #FF8856;
-    display: inline-block;
-    border: solid 1px #FF8856;
+    font-size: 16px;
+    padding: 30px 30px;
 }
-.btn-header-login:link {
-    color: #FF8856;
+.comment-if-link:link {
+    color: #C0C0C0;
 }
-.btn-header-login:visited {
-    color: #FF8856;
+.comment-if-link:visited {
+    color: #C0C0C0;
 }
-.btn-header-login:hover {
-    color: #FF8856;
+.comment-if-link:hover {
+    color: #C0C0C0;
 }
-.btn-header-login:active {
-    color: #FF8856;
+.comment-if-link:active {
+    color: #C0C0C0;
 }
 
+
+
+// user-edit 画面
+.useredit-card {
+    margin: 100px auto 120px;
+}
+
+
+
+
+// footer
+.footer {
+    position: absolute;
+    bottom: 0; /*下に固定*/
+    width: 100%;
+    height: 125px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #848282;
+    font-size: 15px;
+    color: white;
+}
+
+.footer-items {
+    list-style: none;
+}
