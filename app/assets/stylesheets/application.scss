@@ -15,6 +15,8 @@
  */
  @import "bootstrap";
 
+
+
 // 全体
 .wrapper{
     min-height: 100vh;
@@ -35,39 +37,10 @@ outline: none;
     padding-top: 25px;
 }
 
-// ボタンの設定
-.btn {
-    padding: 10px 141px;
-    border: 0 none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-// bootstrapのprimaryの色
-.btn-primary {
-    background: #FF8856; //ボタンの背景色
-    color: #FFFFFF; //ボタンのテキストの色
-}
-
-.btn-primary:hover, .btn-primary:focus, 
-.btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:active.focus,
-.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary.active.focus,
-.open > .dropdown-toggle.btn-primary, 
-.open > .dropdown-toggle.btn-primary:hover,
-.open > .dropdown-toggle.btn-primary:focus, 
-.open > .dropdown-toggle.btn-primary.focus,
-.btn-primary.disabled:hover, .btn-primary[disabled]:hover, fieldset[disabled] .btn-primary:hover,
-.btn-primary.disabled:focus, .btn-primary[disabled]:focus, fieldset[disabled] .btn-primary:focus,
-.btn-primary.disabled.focus, .btn-primary[disabled].focus, fieldset[disabled] .btn-primary.focus {
-    background: #FF8856; //ボタンの上にポインタを持ってきたり、クリックしたりした時の背景色
-    color: #FFFFFF; //ボタンの上にポインタを持ってきたり、クリックしたりした時のテキストの色
-}
-
 .actions {
     text-align: center;
 }
+
 
 
 
@@ -308,7 +281,14 @@ input[type="text"],[type="email"],[type="password"] {
     color: #ccc;
     font-size: 12px;
 }
-
+.submit {
+    background-color: #FF8856;
+    color: #FFFFFF;
+    font-size: 15px;
+    padding: 10px 145px;
+    text-align: center;
+    border: none;
+}
 
 
 

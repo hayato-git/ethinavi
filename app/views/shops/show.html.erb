@@ -66,17 +66,19 @@
 						<a href="https://twitter.com/intent/tweet?text=<%= @shop.shop_name %>%20%23ethinavi%20%0a&url=https://ethinavi.herokuapp.com/shops/<%= @shop.id %>" target="_blank" rel="nofollow" class="btn-twitter mb-4 mt-2"><i class="fab fa-twitter"></i> 投稿する</a>
 					</div>
 					<!-- 管理者のみ表示 -->
-					<% if current_user.user_flag == 0 %>
-						<div class="btns-btn">
-							<%= link_to edit_shop_path, class: "btn-edit mb-4 mt-2" do %>
-								<i class="far fa-edit"> 編集する</i>
-							<% end %>
-						</div>
-						<div class="btns-btn">
-							<%= link_to shop_path , method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-destroy mb-4 mt-2" do %>
-								<i class="far fa-trash-alt"> 削除する</i>
-							<% end %>
-						</div>
+					<% if user_signed_in? %>
+						<% if current_user.user_flag == 1 %>
+							<div class="btns-btn">
+								<%= link_to edit_shop_path, class: "btn-edit mb-4 mt-2" do %>
+									<i class="far fa-edit"> 編集する</i>
+								<% end %>
+							</div>
+							<div class="btns-btn">
+								<%= link_to shop_path , method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-destroy mb-4 mt-2" do %>
+									<i class="far fa-trash-alt"> 削除する</i>
+								<% end %>
+							</div>
+						<% end %>
 					<% end %>
 
 				</div>
