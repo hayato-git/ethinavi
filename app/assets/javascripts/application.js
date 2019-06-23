@@ -16,3 +16,23 @@
 	//= require jquery
 	//= require bootstrap-sprockets
 	//= require_tree .
+
+// shop-show画面のコメント入力
+// コメントが1文字でも打たれてなかったらボタンを押せない
+
+$(function() {
+  if ( $('#text').val().length == 0 ) {
+    $('#submit').attr('disabled', 'disabled');
+  }
+  $('#text').bind('keydown keyup keypress change', function() {
+    if ( $(this).val().length > 0 ) {
+      $('#submit').removeAttr('disabled');
+      $('#submit').css({'background-color': '#FF8856'})
+      $('#submit').css({'color': '#FFFFFF'});
+    } else {
+      $('#submit').attr('disabled', 'disabled');
+      $('#submit').css({'background-color': '#F5F5F5'});
+    }
+  });
+});
+

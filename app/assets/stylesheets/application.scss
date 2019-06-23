@@ -21,6 +21,10 @@ body {
     background-color: #FCFCFC;
 }
 
+*:focus {
+outline: none;
+}
+
 // それぞれrowの間
 .row {
     padding-top: 25px;
@@ -311,8 +315,29 @@ th,td{
     font-weight: normal;
 }
 .comment-form {
+    position: relative;
     text-align: center;
     padding: 30px 30px;
+}
+.comment-form-image {
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.comment-text-area {
+    border: none;
+    background-color: #FCFCFC;
+}
+.comment-submit {
+    border: none;
+    background-color: #F5F5F5;
+    margin-left: 30px;
+    font-size: 15px;
+    padding: 10px 30px 10px;
+    border-radius: 5%;
 }
 .comment-if {
     text-align: center;

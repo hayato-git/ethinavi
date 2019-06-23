@@ -109,9 +109,10 @@
 
 					<% if user_signed_in? %>
 						<div class="comment-form">
+							<%= attachment_image_tag current_user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "comment-form-image" %>
 							<%= form_for([@shop, @comment]) do |f| %>
-								<%= f.text_field :comment, placeholder: " コメントを入力" %>
-								<%= f.submit "送信する" %>
+								<%= f.text_area :comment, id: "text", class: "comment-text-area", placeholder: " コメントを入力" %>
+								<%= f.submit "送信", id: "submit", class: "comment-submit" %>
 							<% end %>
 						</div>
 					<% else %>
