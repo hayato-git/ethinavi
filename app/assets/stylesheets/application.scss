@@ -21,7 +21,7 @@
 .wrapper{
     min-height: 100vh;
     position: relative;
-    padding-bottom: 300px;
+    padding-bottom: 200px;
 }
 
 body {
@@ -603,8 +603,31 @@ th,td{
     background-color: #848282;
     font-size: 15px;
     color: white;
+    display: inline-block;
 }
 
 .footer-items {
     list-style: none;
+}
+
+// 利用規約画面
+
+.terms-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #FF8856;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+.align-left{
+    text-align: left;
+}
+.small-text {
+    font-size: 14px;
+}
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 1.2rem;
 }

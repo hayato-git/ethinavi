@@ -31,5 +31,6 @@ class User < ApplicationRecord
 	attachment :userimage
 
 	validates :name, presence: true
+	validates :email, presence: true, uniqueness: true
 	
 end
