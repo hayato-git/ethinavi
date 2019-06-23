@@ -22,7 +22,7 @@ body {
 
 // それぞれrowの間
 .row {
-    padding-top: 20px;
+    padding-top: 25px;
 }
 
 // ボタンの設定
@@ -184,47 +184,21 @@ input[type="text"],[type="email"],[type="password"] {
 
 
 // shop-show 画面
-.show-genre {
-    font-size: 16px;
-}
 // Table
-// table{
-//     width: 100%;
-// }
-// table th{
-//     position: relative;
-//     text-align: left;
-//     width: 35%;
-// }
-// table th:after{
-//     display: block;
-//     content: "";
-//     width: 30px;
-//     height: 2px;
-//     background-color: #FF8856;
-//     position: absolute;
-//     top:calc(50% - 1px);
-//     right:20px;
-// }
-// table td{
-//     text-align: left;
-//     width: 85%;
-// }
-
 table {
     width: 100%;
 }
 th {
     width: 20%;
     text-align: center;
-    padding: 20px 10px;
+    padding: 15px 8px;
     background-color: #EEEEEE;
 
 }
 td {
     width: 80%;
     text-align: left;
-    padding: 20px 10px;
+    padding: 15px 8px;
     background-color: #FFFFFF;
 }
 th,td{
@@ -232,6 +206,7 @@ th,td{
   border-left: none;
   border-right: none;
 }
+
 // ボタン・各ボタン(一部about画面・top画面でも使用)
 .btns {
     display: flex;
@@ -348,7 +323,7 @@ th,td{
 
 // footer
 .footer {
-    height: 180px;
+    height: 160px;
     text-align: center;
     padding: 50px 0;
     background-color: #848282;

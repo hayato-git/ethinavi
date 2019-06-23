@@ -12,11 +12,7 @@
     		<div class="col-md-3"></div>
     		<div class="col-md-6">
     			<h2 class="card-title text-left"><%= @shop.shop_name %></h2>
-                	<h4><% @shop.genres.each do |genre| %>
-                		<span class=" show-genre badge badge-pill badge-dark"><%= genre.genre_i18n %></span>
-                		<% end %>
-                	</h4>
-                	<p><%= simple_format(@shop.description) %></p>
+                <p><%= simple_format(@shop.description) %></p>
     		</div>
     		<div class="col-md-3"></div>
     	</div>
@@ -24,41 +20,14 @@
     	<div class="row">
     		<div class="col-md-3"></div>
     		<div class="col-md-6">
-				<!-- <div class="show-table">
-					<table>
-						  <tr>
-						    <th>HP</th>
-						    <td><a href="<= @shop.homepage %>"></a></td>
-						  </tr>
-						  <tr>
-						    <th>住所</th>
-						    <td>〒<= @shop.postalcode %> <= @shop.address %></td>
-						  </tr>
-						  <tr>
-						    <th>電話番号</th>
-						    <td><= @shop.phonenum %></td>
-						  </tr>
-						  <tr>
-						    <th>アクセス方法</th>
-						    <td><= @shop.access %></td>
-						  </tr>
-						  <tr>
-						  	<th>営業時間</th>
-						  	<td><= @shop.business_hours %></td>
-						  </tr>
-						  <tr>
-						  	<th>定休日</th>
-						  	<td><= @shop.regular_holiday %></td>
-						  </tr>
-						  <tr>
-						  	<th>開店年月日</th>
-						  	<td><= @shop.opening_date %></td>
-						  </tr>
-					</table>
-				</div> -->
 				<table>
 						<tr>
-							<th>HP</th><td><a href="<%= @shop.homepage %>"><%= @shop.homepage %></a></td>
+							<th>ジャンル</th>
+							<td>
+								<% @shop.genres.each do |genre| %>
+									<%= genre.genre_i18n %>
+								<% end %>
+							</td>
 						</tr>
 						<tr>
 							<th>住所</th><td>〒<%= @shop.postalcode %><%= @shop.address %></td>
@@ -77,6 +46,9 @@
 						</tr>
 						<tr>
 							<th>創業日</th><td><%= @shop.opening_date %></td>
+						</tr>
+						<tr>
+							<th>HP</th><td><a href="<%= @shop.homepage %>"><%= @shop.homepage %></a></td>
 						</tr>
 				</table>
 			</div>
@@ -132,19 +104,21 @@
 						</div>
 					</div>
 					<% end %>
+
 					<hr color="#FCFCFC" width="100%" size="1">
-					<!-- if user_signed_in?  -->
+
+					<% if user_signed_in? %>
 						<div class="comment-form">
 							<%= form_for([@shop, @comment]) do |f| %>
 								<%= f.text_field :comment, placeholder: " コメントを入力" %>
 								<%= f.submit "送信する" %>
 							<% end %>
 						</div>
-					<!-- else  -->
+					<% else %>
 						<div class="comment-if">
 							コメントを投稿するには、<%= link_to "ログイン", new_user_session_path, class: "comment-if-link" %> または <%= link_to "新規登録",  new_user_registration_path, class: "comment-if-link" %> する必要があります
 						</div>
-					<!-- end  -->
+					<% end %>
 			</div>
 			<div class="col-md-3"></div>
 		</div>
