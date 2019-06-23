@@ -15,6 +15,7 @@
  */
  @import "bootstrap";
 
+
 body {
     font-family: 'Lato', 'Noto Sans JP', '游ゴシック Medium', '游ゴシック体', 'Yu Gothic Medium', YuGothic, 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     background-color: #FCFCFC;
@@ -157,29 +158,46 @@ input[type="text"],[type="email"],[type="password"] {
 
 
 // shop-index 画面
-.index-card {
-    margin: 50px auto;
-}
-
-.genre-link:link {
-    color: #000000;
-}
-.genre-link:visited {
-    color: #000000;
-}
-.genre-link:hover {
-    color: #000000;
-}
-.genre-link:active {
-    color: #000000;
+.genre-all {
+    margin-left: 250px;
+    margin-top: 5px;
 }
 
 .nav-pills .nav-link.active {
-    background-color: #9a2cb6;
+    background-color: #FCFCFC;
+    text-align: center;
+    font-size: 16px;
+    color: #000000;
 }
-
+.genre-link:link {
+    color: #808080;
+}
+.genre-link:visited {
+    color: #808080;
+}
+.genre-link:hover {
+    color: #808080;
+}
+.genre-link:active {
+    color: #808080;
+}
+.index-col {
+    padding-right: 20px;
+}
+.index-card {
+    margin: 50px auto;
+    border: none;
+}
+.index-card-body {
+    padding: 7px 0 0 0 ;
+    background-color: #FCFCFC;
+}
+.index-card-text {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
 .genre-text {
-    text-align: right;
+    font-size: 12px;
 }
 
 
@@ -319,13 +337,22 @@ th,td{
 .useredit-card {
     margin: 100px auto 120px;
 }
+// 全体
+.wrapper{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 300px;
+}
 
 
 // footer
 .footer {
-    height: 160px;
+    position: absolute;
+    bottom: 0; /*下に固定*/
+    width: 100%;
+    height: 125px;
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     background-color: #848282;
     font-size: 15px;
     color: white;

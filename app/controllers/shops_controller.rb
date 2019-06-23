@@ -55,14 +55,34 @@ class ShopsController < ApplicationController
     private
 
     def shop_params
-      params.require(:shop).permit(:shop_name, :shop_image, :phonenum, :postalcode, :address, :description, :regular_holiday, :access, :business_hours, :opening_date, :homepage,
+      params.require(:shop).permit(:shop_name,
+                                   :shop_image,
+                                   :phonenum,
+                                   :postalcode,
+                                   :address,
+                                   :description,
+                                   :regular_holiday,
+                                   :access,
+                                   :business_hours,
+                                   :opening_date,
+                                   :homepage,
                                     genres_attributes: [:genre]
                                   )
     end
 
     def update_show_params
-      params.require(:shop).permit(:shop_name, :shop_image, :phonenum, :postalcode, :address, :description, :regular_holiday, :access, :business_hours, :opening_date, :homepage,
+      params.require(:shop).permit(:shop_name,
+                                   :shop_image,
+                                   :phonenum,
+                                   :postalcode,
+                                   :address,
+                                   :description,
+                                   :regular_holiday,
+                                   :access,
+                                   :business_hours,
+                                   :opening_date,
+                                   :homepage,
                                     genres_attributes: [:genre, :_destroy, :id]
-                                    )
+                                  )
     end
 end
