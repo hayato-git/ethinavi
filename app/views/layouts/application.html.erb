@@ -104,12 +104,22 @@
       <%= yield %>
 
       <footer class="footer">
-        <ul class="footer-items">
-          <li>利用規約 / お問い合わせ / あああ / aaaa / aaaa </li>
-          <li>お問い合わせ</li>
-          <li><i class="fab fa-twitter"></i></li>
-          <li><p class="footer-text">©︎ Ethinavi All rights reseverd.</p></li>
-        </ul>
+        <div class="footer-container">
+          <div class="footer-nav">
+            <div class="footer-links">
+              <a href="home/terms" class="footer-item">利用規約</a>
+              /
+              <a href="home/privacy" class="footer-item">プライバシーポリシー</a>
+              /
+              <a href="home/about" class="footer-item">ethinaviとは</a>
+              /
+              <a href="home/top" class="footer-item">エシカル消費</a>
+              /
+              <!-- TODO: Twitter製作後リンク貼り付け -->
+              <a href="home/privacy" class="footer-item">お問い合わせ・改善の声</a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   </body>

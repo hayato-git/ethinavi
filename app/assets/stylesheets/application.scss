@@ -139,7 +139,7 @@ outline: none;
 
 
 
-// about画面
+// about画面（Ethinaviとは?画面）
 [data-ruby] {
     position: relative;
 }
@@ -220,7 +220,7 @@ outline: none;
 }
 
 
-// top画面
+// top画面（エシカル消費説明画面）
 .top-title {
     text-align: center;
     font-weight: bold;
@@ -292,7 +292,7 @@ input[type="text"],[type="email"],[type="password"] {
 
 
 
-// sign-up 画面
+// sign-up画面（新規登録画面）
 .signup-card {
     margin: 80px auto 100px;
 }
@@ -317,7 +317,7 @@ input[type="text"],[type="email"],[type="password"] {
 
 
 
-// log-in 画面
+// log-in画面（ログイン画面）
 .login-card {
     margin: 80px auto 100px;
 }
@@ -352,7 +352,7 @@ input[type="text"],[type="email"],[type="password"] {
 
 
 
-// shop-new 画面
+// shop-new画面（お店新規投稿画面）
 .shopnew-card {
     margin: 50px auto 100px;
 }
@@ -366,7 +366,7 @@ textarea {
 
 
 
-// shop-edit 画面
+// shop-edit画面（お店情報編集画面）
 .shopedit-card {
     margin: 50px auto 100px;
 }
@@ -378,7 +378,7 @@ textarea {
 
 
 
-// shop-index 画面
+// shop-index画面（お店一覧画面）
 .genre-all {
     margin-left: 250px;
     margin-top: 5px;
@@ -435,7 +435,7 @@ textarea {
 
 
 
-// shop-show 画面
+// shop-show画面（お店詳細画面）
 // Table
 table {
     width: 100%;
@@ -584,7 +584,7 @@ th,td{
 
 
 
-// user-edit 画面
+// user-edit画面（ユーザー情報編集画面）
 .useredit-card {
     margin: 100px auto 120px;
 }
@@ -602,24 +602,41 @@ th,td{
     padding: 20px 0;
     background-color: #848282;
     font-size: 15px;
-    color: white;
+    color: #FFFFFF;
     display: inline-block;
 }
-
-.footer-items {
-    list-style: none;
+.footer-container {
+    margin: 0 auto;
 }
-
-// 利用規約画面
-
-.terms-title {
-    font-size: 22px;
-    font-weight: bold;
+.footer-nav {
     text-align: center;
-    color: #FF8856;
-    padding-top: 50px;
-    margin-bottom: 50px;
+    // margin-top: 8px;
+    margin-bottom: 40px;
 }
+.footer-links {
+    margin-top: 5px;
+    font-size: 13px;
+    color: #FFFFFF;
+}
+.footer-item {
+    display: inline-block;
+}
+.footer-item:link {
+    color: #FFFFFF;
+}
+.footer-item:visited {
+    color: #FFFFFF;
+}
+.footer-item:hover {
+    color: #FFFFFF;
+}
+.footer-item:active {
+    color: #FFFFFF;
+}
+
+
+
+// terms privacy 共通部分
 .align-left{
     text-align: left;
 }
@@ -630,4 +647,31 @@ th,td{
     font-size: 16px;
     font-weight: bold;
     margin: 0 0 1.2rem;
+}
+
+
+
+
+// terms画面（利用規約画面）
+
+.terms-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #FF8856;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
+// privacy画面（プライバシーポリシー画面）
+.privacy-title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #FF8856;
+    padding-top: 50px;
+    margin-bottom: 50px;
 }
