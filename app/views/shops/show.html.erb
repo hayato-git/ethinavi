@@ -100,6 +100,9 @@
 						</div>
 						<div class="comment-info">
 							<%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+							<% if user_signed_in? && comment.user == current_user %>
+      							<%= link_to '削除', shop_comment_path(@shop, comment), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "comment-delete" %>
+ 							<% end %>
 						</div>
 						<div class="comment-message">
 							<%= simple_format(comment.comment) %>
