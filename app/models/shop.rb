@@ -34,6 +34,6 @@ class Shop < ApplicationRecord
 	validates :regular_holiday, presence: true
 	validates :access, presence: true
 	validates :business_hours, presence: true
-	validates :opening_date, presence: true
+	# validates :opening_date, presence: true
 
 end
