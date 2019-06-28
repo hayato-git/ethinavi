@@ -81,3 +81,5 @@ gem "jquery-rails"
 gem "pry-rails"
 # modeleにschema情報
 gem "annotate"
+# herokuのerrorを細かく
+gem 'rails_12factor', group: :production
