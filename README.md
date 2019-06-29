@@ -1,27 +1,28 @@
 
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
 # ethinavi
+- サイト概要
+  > エシカルな消費が実践できるお店を発見・応援できるサイト
+- ターゲットユーザー
+  > エシカルな消費を通じて社会問題の解決に貢献したいユーザー
+- 利用シーン
+  > 自宅でお店を検索し実際にお店に足をはこんでもらい、SNSを通じてお店を応援する
+- ターゲットユーザーの利用目的
+  > 自分の身近にあるエシカルな消費を知るため。自分の活動（お店側）を知ってもらうため。
+
+## 使用言語
+* Vagrant 2.0.2
+* Rails 5.2.3
+* ruby 2.5.5
+
+## 使い方
+- 新規登録してない方
+  > お店にコメントが出来ません。コメントを残したい方は新規登録お願いします。
+- 新規登録済みの方
+  > お店に対してコメントを残せます。
+  > 登録いただくのはユーザー名・メールアドレスです。（どちらも変更可能）
+
+## コピーライト
+* 2019 Ethinavi All rights reseverd.
+
+## 質問・相談先
+* Twiter([@ethinavi](https://twitter.com/#!/ethinavi "twitter@ethinavi")).
