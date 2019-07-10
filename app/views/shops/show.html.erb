@@ -1,134 +1,143 @@
 <div class="content">
-	<div class="container-fluid">
-		<!-- お店の画像と店名・ジャンル・説明 -->
-    	<div class="row">
-    		<div class="col-md-3"></div>
-        	<div class="col-md-6">
-            	<%= attachment_image_tag @shop, :shop_image, :fill, 700, 400, format: 'jpeg', fallback: "shop_no_image.jpg", :size => "700x400", class: "img-thumbnail" %>
-            </div>
-            <div class="col-md-3"></div>
-    	</div>
-    	<div class="row">
-    		<div class="col-md-3"></div>
-    		<div class="col-md-6">
-    			<h2 class="card-title text-left"><%= @shop.shop_name %></h2>
-                <p><%= simple_format(@shop.description) %></p>
-    		</div>
-    		<div class="col-md-3"></div>
-    	</div>
-    	<!-- お店の基本情報 -->
-    	<div class="row">
-    		<div class="col-md-3"></div>
-    		<div class="col-md-6">
-				<table>
-						<tr>
-							<th>ジャンル</th>
-							<td>
-								<% @shop.genres.each do |genre| %>
-									<%= genre.genre_i18n %>
-								<% end %>
-							</td>
-						</tr>
-						<tr>
-							<th>住所</th><td>〒<%= @shop.postalcode %><%= @shop.address %></td>
-						</tr>
-						<tr>
-							<th>電話番号</th><td><%= @shop.phonenum %></td>
-						</tr>
-						<tr>
-							<th>アクセス方法</th><td><%= @shop.access %></td>
-						</tr>
-						<tr>
-							<th>営業時間</th><td><%= @shop.business_hours %></td>
-						</tr>
-						<tr>
-							<th>定休日</th><td><%= @shop.regular_holiday %></td>
-						</tr>
-						<tr>
-							<th>創業日</th><td><%= @shop.opening_date %></td>
-						</tr>
-						<tr>
-							<th>HP</th><td><a href="<%= @shop.homepage %>"><%= @shop.homepage %></a></td>
-						</tr>
-				</table>
-			</div>
-			<div class="col-md-3"></div>
-		</div>
-		<!-- ボタンを配置 -->
-		<div class="row">
-			<div class="col-md-4"></div>
-			<div class="col-md-4">
-				<div class="btns">
-					<div class="btns-btn">
-						<a href="http://www.facebook.com/share.php?u=https://ethinavi.herokuapp.com/shops/<%= @shop.id %>&t=<%= @shop.shop_name %>" target="_blank" rel="nofollow" class="btn-facebook mb-4 mt-2"><i class="fab fa-facebook-f"></i> 投稿する</a>
-					</div>
-					<div class="btns-btn">
-						<a href="https://twitter.com/intent/tweet?text=<%= @shop.shop_name %>%20%23ethinavi%20%0a&url=https://ethinavi.herokuapp.com/shops/<%= @shop.id %>" target="_blank" rel="nofollow" class="btn-twitter mb-4 mt-2"><i class="fab fa-twitter"></i> 投稿する</a>
-					</div>
-					<!-- 管理者のみ表示 -->
-					<% if user_signed_in? %>
-						<% if current_user.user_flag == 1 %>
-							<div class="btns-btn">
-								<%= link_to edit_shop_path, class: "btn-edit mb-4 mt-2" do %>
-									<i class="far fa-edit"> 編集する</i>
-								<% end %>
-							</div>
-							<div class="btns-btn">
-								<%= link_to shop_path , method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-destroy mb-4 mt-2" do %>
-									<i class="far fa-trash-alt"> 削除する</i>
-								<% end %>
-							</div>
-						<% end %>
-					<% end %>
+  <div class="container-fluid">
+	<!-- お店の画像と店名・ジャンル・説明 -->
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <%= attachment_image_tag @shop, :shop_image, :fill, 700, 400, format: 'jpeg', fallback: "shop_no_image.jpg", :size => "700x400", class: "img-thumbnail" %>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
 
-				</div>
-			</div>
-			<div class="col-md-4"></div>
-		</div>
-		<hr color="#FCFCFC" width="100%" size="1">
-		<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-6">
-				<h6>コメント<%= @shop.comments.count %>件</h6><br>
-					<% @shop.comments.each do |comment| %>
-					<div class="comment">
-						<div class="comment-icon">
-							<%= attachment_image_tag comment.user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "image-comment" %>
-						</div>
-						<div class="comment-name">
-							<%= comment.user.name %>
-						</div>
-						<div class="comment-info">
-							<%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
-							<% if user_signed_in? && comment.user == current_user %>
-      							<%= link_to '削除', shop_comment_path(@shop, comment), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "comment-delete" %>
- 							<% end %>
-						</div>
-						<div class="comment-message">
-							<%= simple_format(comment.comment) %>
-						</div>
-					</div>
-					<% end %>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <h2 class="card-title text-left"><%= @shop.shop_name %></h2>
+        <p><%= simple_format(@shop.description) %></p>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
 
-					<hr color="#FCFCFC" width="100%" size="1">
-
-					<% if user_signed_in? %>
-						<div class="comment-form">
-							<%= attachment_image_tag current_user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "comment-form-image" %>
-							<%= form_for([@shop, @comment]) do |f| %>
-								<%= f.text_area :comment, id: "text", class: "comment-text-area", placeholder: " コメントを入力" %>
-								<%= f.submit "送信", id: "submit", class: "comment-submit" %>
-							<% end %>
-						</div>
-					<% else %>
-						<div class="comment-if">
-							コメントを投稿するには、<%= link_to "ログイン", new_user_session_path, class: "comment-if-link" %> または <%= link_to "新規登録",  new_user_registration_path, class: "comment-if-link" %> する必要があります
-						</div>
-					<% end %>
-			</div>
-			<div class="col-md-3"></div>
-		</div>
+    <!-- お店の基本情報 -->
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+	    <table>
+		  <tr>
+			<th>ジャンル</th>
+			<td>
+			  <% @shop.genres.each do |genre| %>
+			    <%= genre.genre_i18n %>
+		      <% end %>
+			</td>
+		  </tr>
+		  <tr>
+			<th>住所</th><td>〒<%= @shop.postalcode %><%= @shop.address %></td>
+		  </tr>
+		  <tr>
+			<th>電話番号</th><td><%= @shop.phonenum %></td>
+		  </tr>
+		  <tr>
+			<th>アクセス方法</th><td><%= @shop.access %></td>
+		  </tr>
+		  <tr>
+			<th>営業時間</th><td><%= @shop.business_hours %></td>
+		  </tr>
+		  <tr>
+		    <th>定休日</th><td><%= @shop.regular_holiday %></td>
+		  </tr>
+		  <tr>
+		    <th>創業日</th><td><%= @shop.opening_date %></td>
+		  </tr>
+		  <tr>
+			<th>HP</th><td><a href="<%= @shop.homepage %>"><%= @shop.homepage %></a></td>
+		  </tr>
+		</table>
+	  </div>
+	  <div class="col-md-3"></div>
 	</div>
+
+	<!-- ボタンを配置 -->
+	<div class="row">
+	  <div class="col-md-4"></div>
+	  <div class="col-md-4">
+		<div class="btns">
+		  <div class="btns-btn">
+			<a href="http://www.facebook.com/share.php?u=https://ethinavi.herokuapp.com/shops/<%= @shop.id %>&t=<%= @shop.shop_name %>" target="_blank" rel="nofollow" class="btn-facebook mb-4 mt-2"><i class="fab fa-facebook-f"></i> 投稿する
+			</a>
+		  </div>
+		  <div class="btns-btn">
+			<a href="https://twitter.com/intent/tweet?text=<%= @shop.shop_name %>%20%23ethinavi%20%0a&url=https://ethinavi.herokuapp.com/shops/<%= @shop.id %>" target="_blank" rel="nofollow" class="btn-twitter mb-4 mt-2"><i class="fab fa-twitter"></i> 投稿する
+			</a>
+		  </div>
+		  <!-- 管理者のみ表示 -->
+			<% if user_signed_in? %>
+			  <% if current_user.user_flag == 1 %>
+				<div class="btns-btn">
+				  <%= link_to edit_shop_path, class: "btn-edit mb-4 mt-2" do %>
+					<i class="far fa-edit"> 編集する</i>
+				  <% end %>
+				</div>
+				<div class="btns-btn">
+				  <%= link_to shop_path , method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-destroy mb-4 mt-2" do %>
+					<i class="far fa-trash-alt"> 削除する</i>
+				  <% end %>
+				</div>
+			  <% end %>
+			<% end %>
+
+		</div>
+	  </div>
+		<div class="col-md-4"></div>
+	</div>
+
+		<hr color="#FCFCFC" width="100%" size="1">
+
+	<div class="row">
+	  <div class="col-md-3"></div>
+	  <div class="col-md-6">
+		<h6>コメント<%= @shop.comments.count %>件</h6><br>
+		<% @shop.comments.each do |comment| %>
+		  <div class="comment">
+			<div class="comment-icon">
+			  <%= attachment_image_tag comment.user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "image-comment" %>
+			</div>
+		    <div class="comment-name">
+			  <%= comment.user.name %>
+			</div>
+		    <div class="comment-info">
+			  <%= comment.created_at.strftime('%Y/%m/%d %H:%M') %>
+			  <% if user_signed_in? && comment.user == current_user %>
+	      	    <%= link_to '削除', shop_comment_path(@shop, comment), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "comment-delete" %>
+	 		  <% end %>
+		    </div>
+			<div class="comment-message">
+			  <%= simple_format(comment.comment) %>
+		    </div>
+		  </div>
+		<% end %>
+
+		<hr color="#FCFCFC" width="100%" size="1">
+
+		<% if user_signed_in? %>
+	      <div class="comment-form">
+			<%= attachment_image_tag current_user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "comment-form-image" %>
+			<%= form_for([@shop, @comment]) do |f| %>
+			  <%= f.text_area :comment, id: "text", class: "comment-text-area", placeholder: " コメントを入力" %>
+			  <%= f.submit "送信", id: "submit", class: "comment-submit" %>
+			<% end %>
+		  </div>
+		<% else %>
+		  <div class="comment-if">
+			コメントを投稿するには、<%= link_to "ログイン", new_user_session_path, class: "comment-if-link" %>
+			または <%= link_to "新規登録", new_user_registration_path, class: "comment-if-link" %> する必要があります
+		  </div>
+		<% end %>
+	  </div>
+	  <div class="col-md-3"></div>
+	</div>
+
+  </div>
 </div>
 
 

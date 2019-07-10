@@ -52,7 +52,7 @@ class ShopsController < ApplicationController
       redirect_to("/shops")
   	end
 
-    private
+  private
 
     def shop_params
       params.require(:shop).permit(:shop_name,
@@ -85,4 +85,5 @@ class ShopsController < ApplicationController
                                     genres_attributes: [:genre, :_destroy, :id]
                                   )
     end
+
 end

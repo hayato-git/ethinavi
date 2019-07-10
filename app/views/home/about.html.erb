@@ -1,41 +1,40 @@
 <div class="container">
-  	<div class="row">
-    	<div class="card border border-0" style="width: 72rem;">
-        	<div class="card-body">
-				<h1 class="about-title"><span data-ruby="エシナビ">Ethinavi</span></h1>
+  <div class="row">
+    <div class="card border border-0" style="width: 72rem;">
+      <div class="card-body">
+        <h1 class="about-title"><span data-ruby="エシナビ">Ethinavi</span></h1>
+		  <p class="about-text">
+		    エシカル消費を通じて社会問題の解決に貢献したいユーザが<br>
+		    私達の身近にあるエシカル消費を実行できるお店を探し、応援できるサイトです。
+		  </p>
+		  <img src="/assets/home-about.jpg" alt="サイトの画面一覧" class="about-img">
 
-				<p class="about-text">
-					エシカル消費を通じて社会問題の解決に貢献したいユーザが<br>
-					私達の身近にあるエシカル消費を実行できるお店を探し、応援できるサイトです。
-				</p>
-				<img src="/assets/home-about.jpg" alt="サイトの画面一覧" class="about-img">
+		    <% if user_signed_in? %>
+			  <div class="about-btns">
+			    <div class="btns">
+				  <div class="btns-btn">
+					<%= link_to "エシカルな消費？", home_top_path, { :class => "btn-top" } %>
+				  </div>
+				</div>
+			  </div>
+			<% else %>
+			  <div class="about-btns">
+				<div class="btns">
+				  <div class="btns-btn">
+					<%= link_to "ログイン", new_user_session_path, { :class => "btn-login" } %>
+				  </div>
+					<div class="btns-btn">
+					  <%= link_to "エシカルな消費？", home_top_path, { :class => "btn-top" } %>
+					</div>
+					<div class="btns-btn">
+					  <%= link_to "新規登録", new_user_registration_path, { :class => "btn-signup" } %>
+					</div>
+				</div>
+			  </div>
+			<% end %>
 
-				<% if user_signed_in? %>
-						<div class="about-btns">
-							<div class="btns">
-								<div class="btns-btn">
-									<%= link_to "エシカルな消費？", home_top_path, { :class => "btn-top" } %>
-								</div>
-							</div>
-						</div>
-				<% else %>
-						<div class="about-btns">
-							<div class="btns">
-								<div class="btns-btn">
-									<%= link_to "ログイン", new_user_session_path, { :class => "btn-login" } %>
-								</div>
-								<div class="btns-btn">
-									<%= link_to "エシカルな消費？", home_top_path, { :class => "btn-top" } %>
-								</div>
-								<div class="btns-btn">
-									<%= link_to "新規登録", new_user_registration_path, { :class => "btn-signup" } %>
-								</div>
-							</div>
-						</div>
-				<% end %>
-
-			</div>
-		</div>
+      </div>
 	</div>
+  </div>
 </div>
 

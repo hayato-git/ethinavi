@@ -20,7 +20,7 @@
 
 class Shop < ApplicationRecord
 
-	has_many :comments, dependent: :destroy
+    has_many :comments, dependent: :destroy
 	has_many :genres, dependent: :destroy
 	accepts_nested_attributes_for :genres, allow_destroy: true
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# website: http://ogp.me/ns/ website#">
     <meta property="og:title" content="Ethinavi" />
     <meta property="og:description" content="世界を救う、エシカル消費。エシカルな消費が実践できるお店を発見・応援できるサービスです。" />
@@ -27,6 +28,7 @@
       <header>
         <% if user_signed_in? %>
           <!-- ログイン済みユーザ -->
+
           <% if current_user.user_flag == 0 %>
 
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
@@ -81,6 +83,7 @@
               </div>
 
             </nav>
+
           <% end %>
           <!-- 新規登録してないユーザ -->
         <% else %>

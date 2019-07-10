@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  	def create
+    def create
       @shop = Shop.find(params[:shop_id])
       @comment = @shop.comments.build(comment_params)
       @comment.user_id = current_user.id
@@ -15,7 +15,7 @@ class CommentsController < ApplicationController
       redirect_to shop_path(@shop)
     end
 
-  	private
+  private
 
     def comment_params
       params.require(:comment).permit(:user_id,
