@@ -24,7 +24,6 @@ class Shop < ApplicationRecord
 	has_many :genres, dependent: :destroy
 	accepts_nested_attributes_for :genres, allow_destroy: true
 
-	# attachment :shop_image
 	has_one_attached :shop_image
 
 	validates :shop_name, presence: true

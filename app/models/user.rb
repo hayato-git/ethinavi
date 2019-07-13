@@ -28,7 +28,7 @@ class User < ApplicationRecord
 
 	has_many :comments, dependent: :destroy
 
-	attachment :userimage
+	has_one_attached :user_image
 
 	validates :name, presence: true
 	validates :email, presence: true, uniqueness: true
