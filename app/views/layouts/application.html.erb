@@ -29,7 +29,7 @@
         <% if user_signed_in? %>
           <!-- ログイン済みユーザ -->
 
-          <% if current_user.user_flag == 0 %>
+          <% if current_user.user_flag == 1 %>
 
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
 
@@ -55,7 +55,7 @@
 
             </nav>
           <!-- 管理人 -->
-          <% elsif current_user.user_flag == 1 %>
+          <% elsif current_user.user_flag == 0 %>
 
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFFFF;">
 

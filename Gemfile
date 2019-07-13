@@ -83,3 +83,5 @@ gem "pry-rails"
 gem "annotate"
 # herokuのerrorを細かく
 gem 'rails_12factor', group: :production
+
+gem "aws-sdk-s3", require: false #追記

@@ -4,7 +4,10 @@
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6">
-        <%= attachment_image_tag @shop, :shop_image, :fill, 700, 400, format: 'jpeg', fallback: "shop_no_image.jpg", :size => "700x400", class: "img-thumbnail" %>
+        <!-- <= attachment_image_tag @shop, :shop_image, :fill, 700, 400, format: 'jpeg', fallback: "shop_no_image.jpg", :size => "700x400", class: "img-thumbnail" > -->
+        <% if @shop.shop_image.attached? %>
+  		  <%= image_tag @shop.shop_image %>
+        <% end %>
       </div>
       <div class="col-md-3"></div>
     </div>
