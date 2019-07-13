@@ -393,6 +393,11 @@ textarea {
 
 
 // shop-index画面（お店一覧画面）
+.index_shop_image {
+  width: 350px;
+  height: 180px;
+}
+
 .genre-all {
   margin-left: 250px;
   margin-top: 5px;
@@ -460,6 +465,11 @@ textarea {
 
 
 // shop-show画面（お店詳細画面）
+.show_shop_image {
+  width: 700px;
+  height: 400px;
+}
+
 // Table
 table {
   width: 100%;
@@ -484,8 +494,6 @@ th,td {
   border-left: none;
   border-right: none;
 }
-
-
 
 // ボタン・各ボタン(一部about画面・top画面でも使用)
 .btns {
@@ -544,8 +552,6 @@ th,td {
   display: inline-block;
   border-style: none;
 }
-
-
 
 // コメント機能
 .comment {
