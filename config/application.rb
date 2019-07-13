@@ -20,5 +20,6 @@ module Ethinavi
 	config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     # 日本時間で表示
     config.time_zone = 'Tokyo'
+    config.assets.initialize_on_precompile = false
   end
 end
