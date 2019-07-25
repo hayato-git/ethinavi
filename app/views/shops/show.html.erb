@@ -104,7 +104,14 @@
 		<% @shop.comments.each do |comment| %>
 		  <div class="comment">
 			<div class="comment-icon">
-			  <%= attachment_image_tag comment.user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "image-comment" %>
+
+				<% if comment.user_image.attached? %>
+                  <%= image_tag comment.user_image, :class => "image-comment" %>
+                <% else %>
+                  <%= image_tag "user_default.jpg", :class => "image-comment" %>
+                <% end %>
+
+			  <!-- < attachment_image_tag comment.user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "image-comment" %> -->
 			</div>
 		    <div class="comment-name">
 			  <%= comment.user.name %>
@@ -125,7 +132,14 @@
 
 		<% if user_signed_in? %>
 	      <div class="comment-form">
-			<%= attachment_image_tag current_user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "comment-form-image" %>
+
+	      	<% if current_user.user_image.attached? %>
+              <%= image_tag current_user.user_image, :class => "comment-form-image" %>
+            <% else %>
+              <%= image_tag "user_default.jpg", :class => "comment-form-image" %>
+            <% end %>
+			<!-- < attachment_image_tag current_user, :userimage, format: 'jpeg', fallback: "user_default.jpg", class: "comment-form-image" %> -->
+
 			<%= form_for([@shop, @comment]) do |f| %>
 			  <%= f.text_area :comment, id: "text", class: "comment-text-area", placeholder: " コメントを入力" %>
 			  <%= f.submit "送信", id: "submit", class: "comment-submit" %>
