@@ -509,6 +509,11 @@ th,td {
   border-right: none;
 }
 
+.show-caution {
+  padding: 5px 0;
+  font-size: 12px;
+}
+
 // ボタン・各ボタン(一部about画面・top画面でも使用)
 .btns {
   display: flex;
