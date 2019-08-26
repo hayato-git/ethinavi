@@ -106,8 +106,8 @@
 		  <div class="comment">
 			<div class="comment-icon">
 
-				<% if comment.user_image.attached? %>
-                  <%= image_tag comment.user_image, :class => "image-comment" %>
+				<% if comment.user.user_image.attached? %>
+                  <%= image_tag comment.user.user_image, :class => "image-comment" %>
                 <% else %>
                   <%= image_tag "user_default.jpg", :class => "image-comment" %>
                 <% end %>
