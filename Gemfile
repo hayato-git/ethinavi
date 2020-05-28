@@ -70,7 +70,7 @@ gem "refile", require: "refile/rails", github: 'manfe/refile'
 # 画像サイズ変更
 gem "refile-mini_magick"
 # ページネーション
-gem "kaminari", "~> 1.1.1"
+gem "kaminari", "~> 1.2.1"
 # enumを日本語化
 gem "enum_help"
 # レイアウト
